@@ -15,6 +15,7 @@
 		<script src="dist/semantic.min.js"></script>
 		<script type="text/javascript" src="js/moment.js"></script>
 		<script type="text/javascript" src="js/daterangepicker.js"></script>
+		<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
 		<title>ihotel.mn</title>
 	</head>
 	<body>
@@ -22,6 +23,21 @@
 			<div class="ui container">
 				<div class="cd-logo"><a href="#0"><img src="img/logo-white.png" alt="Logo"></a></div>
 				<div class="important-word"><i class="spinner loading icon"></i>Эд хөрөнгийг бус дурсамжийг цуглуул</div>
+				<div class="dollar-exchange">
+					<div class="ui dropdown dollar-exch">
+						MNT
+						<div class="menu">
+							
+							<div class="item exchange">USA $</div>
+							<div class="item exchange">GBP £</div>
+							<div class="item exchange">JPN ¥</div>
+							<div class="item exchange">AUD $</div>
+							<div class="item exchange">CHN </div>
+							
+						</div>
+					</div>
+				</div>
+				
 				<nav class="main-nav cd-main-nav-wrapper">
 					<ul class="cd-main-nav">
 						<li><a class="cd-signin" href="#0"><i class="user icon"></i>Нэвтрэх</a></li>
@@ -61,21 +77,22 @@
 				</div>
 			</div>
 		</div>
-		
-		<div class="main-page">
-			<div class="partner-info">
+		<div class="silver-back">
+			<div class="main-page">
+				
 				<div class="ui fluid stackable container">
 					
 					<div class="ui stackable column grid">
 						
 						
 						<div class="sixteen wide column">
-							<div class="ui stackable container">
+							<div class="ui container">
 								<div class="ui stackable grid">
-									<div class="sixteen wide column">
-										<div class="ui small green progress" data-value="20" data-total="100" id="example5">
+									<div class="sixteen wide column ihotel-progress">
+										<div class="ui tiny green progress" data-value="10" data-total="100" id="example5">
 											<div class="bar"></div>
 										</div>
+										
 									</div>
 									<div class="four wide column">
 										<div class="ui  fluid vertical pointing menu">
@@ -182,8 +199,6 @@
 													</div>
 												</div>
 											</div>
-
-
 											
 											<button class="ui ihotel right floated button">Бүртгэх
 											<i class="right chevron icon"></i>
@@ -200,43 +215,38 @@
 					</div>
 				</div>
 			</div>
-			
-			<div class="partner">
-				<div class="ui fluid stackable container">
+		</div>
+		
+		
+		<div class="partner">
+			<div class="ui fluid stackable container">
+				
+				
+				<div class="ui stackable column grid">
 					
-					
-					<div class="ui stackable column grid">
-						
-						<div class="sixteen wide column">
-							<div class="ui stackable container">
-								
-								<div class="ui stackable grid">
-									<div class="ui two column row">
-										<div class="column">
-											<img src="img/partner1.png">
-										</div>
-										<div class="column">
-											<img src="img/partner.png">
-										</div>
+					<div class="sixteen wide column">
+						<div class="ui stackable container">
+							
+							<div class="ui stackable grid">
+								<div class="ui two column row">
+									<div class="column">
+										<img src="img/partner1.png">
+									</div>
+									<div class="column">
+										<img src="img/partner.png">
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					
 				</div>
+				
 			</div>
-			
 		</div>
-		
-		
-		
 		<div class="ui inverted vertical footer segment">
 			<div class="ui center aligned container">
 				<div class="ui stackable divided grid">
-					<div class="two wide column footer-menu"></div>
-					<div class="four wide column">
-						
+					<div class="five wide column">
 						<h4 class="ui inverted header">Үндсэн цэс</h4>
 						<div class="ui inverted link list">
 							<a href="#" class="item">Улс орнууд</a>
@@ -245,7 +255,7 @@
 							<a href="#" class="item">Үйлчилгээний нөхцөл</a>
 						</div>
 					</div>
-					<div class="four wide column footer-menu">
+					<div class="six wide column footer-menu">
 						<h4 class="ui inverted header">Бидэнтэй хамтрах</h4>
 						<div class="ui inverted link list">
 							<a href="#" class="item">Буудал нэмэх</a>
@@ -254,7 +264,7 @@
 							<a href="#" class="item">Групп захиалга</a>
 						</div>
 					</div>
-					<div class="four wide column footer-menu">
+					<div class="five wide column footer-menu">
 						<h4 class="ui inverted header">Бидний тухай</h4>
 						<div class="ui inverted link list">
 							<a href="#" class="item">iHotel гэж юу вэ?</a>
@@ -263,24 +273,26 @@
 							<a href="#" class="item">Холбоо барих</a>
 						</div>
 					</div>
-					<div class="two wide column footer-menu"></div>
 				</div>
 				<div class="ui divider"></div>
 			</div>
-			<div class="ui center aligned container copyright">
-				<div class="ui relaxed grid">
-					<div class="three column row">
-						<div class="column"></div>
-						<div class="column"><h5>© copyright 2016 www.iHotel.mn - <a href="#">Айхотел ххк</a></h5></div>
-						<div class="column">
-							
-							<ul class="social-link">
-								<li><a><i class="icon facebook"></i></a></li>
-								<li><a><i class="icon twitter"></i></a></li>
-								<li><a><i class="icon google plus"></i></a></li>
-								<li><a><i class="icon linkedin"></i></a></li>
-								<li><a><i class="icon instagram"></i></a></li>
-							</ul>
+			<div class="copyright">
+				<div class="ui center aligned stackable container">
+					<div class="ui stackable grid">
+						<div class="three column row">
+							<div class="column"></div>
+							<div class="column"><h5>© copyright 2016 www.iHotel.mn - <a href="#">Айхотел ххк</a></h5></div>
+							<div class="column">
+								
+								<ul class="social-link">
+									<li><a><i class="icon facebook"></i></a></li>
+									<li><a><i class="icon twitter"></i></a></li>
+									<li><a><i class="icon google plus"></i></a></li>
+									<li><a><i class="icon linkedin"></i></a></li>
+									<li><a><i class="icon instagram"></i></a></li>
+								</ul>
+								
+							</div>
 						</div>
 					</div>
 				</div>
@@ -297,11 +309,10 @@
 				<div id="cd-login">
 					<form class="ui form">
 						<div class="field">
-							<label>Имэйл</label>
 							<input type="text" name="first-name" placeholder="Имэйл">
 						</div>
 						<div class="field">
-							<label>Нууц үг</label>
+							
 							<input type="password" name="last-name" placeholder="Нууц үг">
 						</div>
 						<div class="field">
@@ -310,52 +321,49 @@
 								<label>Намайг сануулах</label>
 							</div>
 						</div>
-						<button class="ui fluid button" type="submit">НЭВТРЭХ</button>
+						<div class="field">
+							<button class="ui default fluid button" type="submit">НЭВТРЭХ</button>
+						</div>
+						<div class="field">
+							<button class="ui fluid facebook button"><i class="facebook icon"></i>Facebook</button>
+						</div>
+						
+						<button class="ui fluid google plus button"><i class="google plus icon"></i>Google Plus</button>
+						<p class="cd-form-bottom-message"><a href="#0">Нууц үгээ мартсан уу?</a></p>
 					</form>
-					
-					<p class="cd-form-bottom-message"><a href="#0">Нууц үгээ мартсан уу?</a></p>
-					
 				</div>
 				<div id="cd-signup">
 					<form class="ui form">
 						<div class="field">
-							<label>Нэр</label>
 							<input type="text" name="first-name" placeholder="Имэйл">
 						</div>
 						<div class="field">
-							<label>Имэйл</label>
 							<input type="text" name="first-name" placeholder="Имэйл">
 						</div>
 						<div class="field">
-							<label>Нууц үг</label>
 							<input type="password" name="last-name" placeholder="Нууц үг">
 						</div>
 						<div class="field">
 							<div class="ui checkbox">
 								<input type="checkbox" tabindex="0" class="hidden">
 								<label> Би зөвшөөрч байна!</label>
-								
 							</div>
-							<label  class="security"><a href="#">Манай сайтны дүрэмтэй танилцан уу!!!</a></label>
 						</div>
 						<button class="ui fluid button" type="submit">БҮРТГҮҮЛЭХ</button>
+						<p><a href="#">Манай сайтны дүрэмтэй танилцан уу!!!</a></p>
 					</form>
-					
-					
 				</div>
 				<div id="cd-reset-password">
 					<p class="ui center aligned container">Та нууц үгээ мартсан уу? Та манай сайтанд бүртгүүлсэн бүртгэлтэй имэйл хаягаа оруулна уу!</p>
 					<form class="ui form">
 						<div class="field">
-							<label>Имэйл</label>
+							
 							<input type="text" name="first-name" placeholder="Имэйл">
 						</div>
 						<button class="ui fluid button" type="submit">Нууц үг илгээх</button>
-						
+						<p class="cd-form-bottom-message"><a href="#0">Буцах</a></p>
 					</form>
-					<p class="cd-form-bottom-message"><a href="#0">Буцах</a></p>
 				</div>
-				
 			</div>
 		</div>
 		<!-- end login -->
@@ -366,13 +374,11 @@
 		<script src="js/iframe-content.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/responsiveslides.min.js"></script>
-		<script src="/javascript/library/less.min.js"></script>
 		<script>
-				$("#divUpload").on("click", function() {
-		$('#hidde-new-file').click();
+		$(function() {
+		$(".rslides").responsiveSlides();
 		});
 		</script>
-		
 		<script>
 		$('#example5')
 		.progress({
@@ -382,11 +388,6 @@
 		}
 		})
 		;
-		$(function() {
-		$(".rslides").responsiveSlides();
-		});
-		</script>
-		<script>
 		$('#context1 .menu .item')
 		.tab({
 		context: $('#context1')
@@ -404,9 +405,9 @@
 		});
 		</script>
 		<script>
-		</script>
-		
-		<script>
+		$('.ui.checkbox')
+		.checkbox()
+		;
 		$('.ui.accordion')
 		.accordion()
 		;
@@ -437,9 +438,6 @@
 		.search({
 		source: content
 		})
-		;
-		$('.ui.checkbox')
-		.checkbox()
 		;
 		$('.ui.rating')
 		.rating()
@@ -473,6 +471,19 @@
 		{ title: 'Burundi' }
 		];
 		</script>
+		<script defer src="js/jquery.flexslider.js"></script>
+		<script type="text/javascript">
+		$(function(){
+		SyntaxHighlighter.all();
+		});
+		$(window).load(function(){
+		$('.flexslider').flexslider({
+		animation: "slide",
+		controlsContainer: $(".custom-controls-container"),
+		customDirectionNav: $(".custom-navigation a"),
+		});
+		});
+		</script>
 		<script>
 		$('.ui.form')
 		.form({
@@ -499,115 +510,6 @@
 		}
 		})
 		;
-		</script>
-		<script type="text/javascript">
-		$(document).ready(function() {
-		$('#config-text').keyup(function() {
-		eval($(this).val());
-		});
-		
-		$('.configurator input, .configurator select').change(function() {
-		updateConfig();
-		});
-		$('.demo i').click(function() {
-		$(this).parent().find('input').click();
-		});
-		$('#startDate').daterangepicker({
-		singleDatePicker: true,
-		startDate: moment().subtract(6, 'days')
-		});
-		$('#endDate').daterangepicker({
-		singleDatePicker: true,
-		startDate: moment()
-		});
-		updateConfig();
-		function updateConfig() {
-		var options = {};
-		if ($('#singleDatePicker').is(':checked'))
-		options.singleDatePicker = true;
-		
-		if ($('#showDropdowns').is(':checked'))
-		options.showDropdowns = true;
-		if ($('#showWeekNumbers').is(':checked'))
-		options.showWeekNumbers = true;
-		if ($('#showISOWeekNumbers').is(':checked'))
-		options.showISOWeekNumbers = true;
-		if ($('#timePicker').is(':checked'))
-		options.timePicker = true;
-		
-		if ($('#timePicker24Hour').is(':checked'))
-		options.timePicker24Hour = true;
-		if ($('#timePickerIncrement').val().length && $('#timePickerIncrement').val() != 1)
-		options.timePickerIncrement = parseInt($('#timePickerIncrement').val(), 10);
-		if ($('#timePickerSeconds').is(':checked'))
-		options.timePickerSeconds = true;
-		
-		if ($('#autoApply').is(':checked'))
-		options.autoApply = true;
-		if ($('#dateLimit').is(':checked'))
-		options.dateLimit = { days: 7 };
-		if ($('#ranges').is(':checked')) {
-		options.ranges = {
-		'Today': [moment(), moment()],
-		'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-		'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-		'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-		'This Month': [moment().startOf('month'), moment().endOf('month')],
-		'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-		};
-		}
-		if ($('#locale').is(':checked')) {
-		$('#rtl-wrap').show();
-		options.locale = {
-		direction: $('#rtl').is(':checked') ? 'rtl' : 'ltr',
-		format: 'MM/DD/YYYY HH:mm',
-		separator: ' - ',
-		applyLabel: 'Apply',
-		cancelLabel: 'Cancel',
-		fromLabel: 'From',
-		toLabel: 'To',
-		customRangeLabel: 'Custom',
-		daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr','Sa'],
-		monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-		firstDay: 1
-		};
-		} else {
-		$('#rtl-wrap').hide();
-		}
-		if (!$('#linkedCalendars').is(':checked'))
-		options.linkedCalendars = false;
-		if (!$('#autoUpdateInput').is(':checked'))
-		options.autoUpdateInput = false;
-		if (!$('#showCustomRangeLabel').is(':checked'))
-		options.showCustomRangeLabel = false;
-		if ($('#alwaysShowCalendars').is(':checked'))
-		options.alwaysShowCalendars = true;
-		if ($('#parentEl').val().length)
-		options.parentEl = $('#parentEl').val();
-		if ($('#startDate').val().length)
-		options.startDate = $('#startDate').val();
-		if ($('#endDate').val().length)
-		options.endDate = $('#endDate').val();
-		
-		if ($('#minDate').val().length)
-		options.minDate = $('#minDate').val();
-		if ($('#maxDate').val().length)
-		options.maxDate = $('#maxDate').val();
-		if ($('#opens').val().length && $('#opens').val() != 'right')
-		options.opens = $('#opens').val();
-		if ($('#drops').val().length && $('#drops').val() != 'down')
-		options.drops = $('#drops').val();
-		if ($('#buttonClasses').val().length && $('#buttonClasses').val() != 'btn btn-sm')
-		options.buttonClasses = $('#buttonClasses').val();
-		if ($('#applyClass').val().length && $('#applyClass').val() != 'btn-success')
-		options.applyClass = $('#applyClass').val();
-		if ($('#cancelClass').val().length && $('#cancelClass').val() != 'btn-default')
-		options.cancelClass = $('#cancelClass').val();
-		$('#config-text').val("$('#demo').daterangepicker(" + JSON.stringify(options, null, '    ') + ", function(start, end, label) {\n  console.log(\"New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')\");\n});");
-		$('#config-demo').daterangepicker(options, function(start, end, label) { console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')'); });
-		
-		}
-		});
 		</script>
 	</body>
 </html>

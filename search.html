@@ -15,1109 +15,802 @@
 		<script src="dist/semantic.min.js"></script>
 		<script type="text/javascript" src="js/moment.js"></script>
 		<script type="text/javascript" src="js/daterangepicker.js"></script>
-		
+		<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
 		<title>ihotel.mn</title>
 	</head>
 	<body id="hotel-search">
 		<header>
-			<div class="ui search-body container">
-				<div class="cd-logo"><a href="#0"><img src="img/logo-white.png" alt="Logo"></a></div>
-				<div class="important-word"><i class="spinner loading icon"></i>Эд хөрөнгийг бус дурсамжийг цуглуул</div>
-				<nav class="main-nav cd-main-nav-wrapper">
-					<ul class="cd-main-nav">
-						<li><a class="cd-signin" href="#0"><i class="user icon"></i>Нэвтрэх</a></li>
-						<!--<li><a class="cd-signup" href="#0">Бүртгүүлэх</a></li>-->
-						<li>
-							<a href="#0" class="cd-subnav-trigger"><span>Булан</span></a>
-							<ul>
-								<li class="go-back"><a href="#0">Буцах</a></li>
-								<li><a href="#0">Улс орнууд</a></li>
-								<li><a href="#0">Аялах сэдэл</a></li>
-								<li><a href="#0">Түгээмэл асуултууд</a></li>
-								<li><a href="#0">Үйлчилгээний нөхцөл</a></li>
-								<li><a href="#0" class="placeholder">Placeholder</a></li>
-							</ul>
-						</li>
-						<li class="lang-switcher"><a href="#"><img src="img/eng.png"></a></li>
-					</ul>
-				</nav>
-				<a href="#0" class="cd-nav-trigger"><span></span></a>
+			
+			<div class="ui search-header container">
+				<div class="search-header">
+					<div class="cd-logo"><a href="#0"><img src="img/logo-white.png" alt="Logo"></a></div>
+					<div class="important-word"><i class="spinner loading icon"></i>Эд хөрөнгийг бус дурсамжийг цуглуул</div>
+					<div class="dollar-exchange-full">
+						<div class="ui dropdown dollar-exch">
+							MNT
+							<div class="menu">
+								
+								<div class="item exchange">USA $</div>
+								<div class="item exchange">GBP £</div>
+								<div class="item exchange">JPN ¥</div>
+								<div class="item exchange">AUD $</div>
+								<div class="item exchange">CHN </div>
+								
+							</div>
+						</div>
+					</div>
+					<nav class="main-nav cd-main-nav-wrapper">
+						<ul class="cd-main-nav">
+							<li><a class="cd-signin" href="#0"><i class="user icon"></i>Нэвтрэх</a></li>
+							<!--<li><a class="cd-signup" href="#0">Бүртгүүлэх</a></li>-->
+							<li>
+								<a href="#0" class="cd-subnav-trigger"><span>Булан</span></a>
+								<ul>
+									<li class="go-back"><a href="#0">Буцах</a></li>
+									<li><a href="#0">Улс орнууд</a></li>
+									<li><a href="#0">Аялах сэдэл</a></li>
+									<li><a href="#0">Түгээмэл асуултууд</a></li>
+									<li><a href="#0">Үйлчилгээний нөхцөл</a></li>
+									<li><a href="#0" class="placeholder">Placeholder</a></li>
+								</ul>
+							</li>
+							<li class="lang-switcher"><a href="#"><img src="img/eng.png"></a></li>
+						</ul>
+					</nav>
+					<a href="#0" class="cd-nav-trigger"><span></span></a>
+				</div>
 			</div>
 		</header>
-		<div class="main-search">
-			<div class="ui search-body container">
-				
-				<div class="ui grid">
-					<div class="four wide column">
-						<div class="local example">
-							<div class="ui search">
-								<div class="ui fluid left icon input">
-									<input class="prompt" type="text" placeholder="Очих газар...">
-									<i class="marker icon"></i>
-								</div>
-								<div class="results"></div>
-							</div>
-						</div>
-						<script>
-						var content = [
-						{ title: 'Andorra' },
-						{ title: 'United Arab Emirates' },
-						{ title: 'Afghanistan' },
-						{ title: 'Antigua' },
-						{ title: 'Anguilla' },
-						{ title: 'Albania' },
-						{ title: 'Armenia' },
-						{ title: 'Netherlands Antilles' },
-						{ title: 'Angola' },
-						{ title: 'Argentina' },
-						{ title: 'American Samoa' },
-						{ title: 'Austria' },
-						{ title: 'Australia' },
-						{ title: 'Aruba' },
-						{ title: 'Aland Islands' },
-						{ title: 'Azerbaijan' },
-						{ title: 'Bosnia' },
-						{ title: 'Barbados' },
-						{ title: 'Bangladesh' },
-						{ title: 'Belgium' },
-						{ title: 'Burkina Faso' },
-						{ title: 'Bulgaria' },
-						{ title: 'Bahrain' },
-						{ title: 'Burundi' }
+		<main class="cd-main-content"></main>
+		<div class="search-result">
+			
+			<div class="box">
+				<div class="center">
+					<div id="demo" class="box jplist">
 						
-						];
-						</script>
-					</div>
-					<div class="four wide column">
-						<div class="ui page stackable">
-							<form class="ui form">
-								<div class="ui fluid left icon input">
-									<input type="text" name="reservation"
-									id="reservation"
-									value=""/>
-									<i class="calendar icon"></i>
-								</div>
-							</form>
-							<script type="text/javascript">
-							$(document).ready(function() {
-								$('#reservation').daterangepicker(null, function(start, end, label) {
-								console.log(start.toISOString(), end.toISOString(), label);
-								});
-							});
-							</script>
-						</div>
-					</div>
-					<div class="three wide column">
-						<select class="ui fluid search dropdown">
-							<option value="">Өрөө</option>
-							<option value="1">1 өрөө</option>
-							<option value="2">2 өрөө</option>
-							<option value="3">3 өрөө</option>
-							<option value="4">4 өрөө</option>
-							<option value="5">5 өрөө</option>
-							<option value="6">6 өрөө</option>
-							<option value="7">7 өрөө</option>
-							<option value="8">8 өрөө</option>
-							<option value="9">9 өрөө</option>
-							<option value="10">10 өрөө</option>
-							<option value="11">11 өрөө</option>
-							<option value="12">12 өрөө</option>
-							<option value="13">13 өрөө</option>
-							<option value="14">14 өрөө</option>
-						</select>
-					</div>
-					<div class="three wide column">
-						<select class="ui fluid search dropdown">
-							<option value="">Хүний тоо</option>
-							<option value="1">1 хүн</option>
-							<option value="2">2 хүн</option>
-							<option value="3">3 хүн</option>
-							<option value="4">4 хүн</option>
-							<option value="5">5 хүн</option>
-							<option value="6">6 хүн</option>
-							<option value="7">7 хүн</option>
-							<option value="8">8 хүн</option>
-							<option value="9">9 хүн</option>
-							<option value="10">10 хүн</option>
-							<option value="11">11 хүн</option>
-							<option value="12">12 хүн</option>
-							<option value="13">13 хүн</option>
-							<option value="14">14 хүн</option>
-						</select>
-					</div>
-					<div class="two wide column">
-						<div class="ui fluid red button">
-							хайх
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="box">
-			<div class="center">
-				<div id="demo" class="box jplist">
-					<div class="search-filter">
-						<div class="ui search-body container">
-							<div class="ui grid">
-								<div class="four wide column">
-									<label class="room-label">Буудалын үнэ</label>
-									<div class="jplist-panel box panel-top">
-										
-										<div
-											class="jplist-range-slider"
-											data-control-type="range-slider"
-											data-control-name="range-slider-prices"
-											data-control-action="filter"
-											data-path=".price"
-											data-slider-func="pricesSlider"
-											data-setvalues-func="priesValues">
-											
-											<div class="value" data-type="prev-value"></div>
-											<div class="ui-slider" data-type="ui-slider"></div>
-											<div class="value" data-type="next-value"></div>
+						<div class="search-filter">
+							
+							<div class="ui stackable search-body container">
+								
+								
+								<div class="ui header-search stackable grid">
+									<div class="four wide column">
+										<div class="local example">
+											<div class="ui search">
+												<div class="ui fluid left icon input">
+													<input class="prompt" type="text" placeholder="Очих газар...">
+													<i class="marker icon"></i>
+												</div>
+												<div class="results"></div>
+											</div>
 										</div>
+									</div>
+									<div class="four wide column">
+										<form class="ui form">
+											<div class="ui fluid left icon input">
+												<input type="text" name="reservation"
+												id="reservation" placeholder="mm/dd/yyyy - mm/dd/yyyy"
+												value=""/>
+												<i class="calendar icon"></i>
+											</div>
+										</form>
+									</div>
+									<div class="three wide column">
+										<select class="ui fluid search dropdown">
+											<option value="">Өрөө</option>
+											<option value="1">1 өрөө</option>
+											<option value="2">2 өрөө</option>
+											<option value="3">3 өрөө</option>
+											<option value="4">4 өрөө</option>
+											<option value="5">5 өрөө</option>
+											<option value="6">6 өрөө</option>
+											<option value="7">7 өрөө</option>
+											<option value="8">8 өрөө</option>
+											<option value="9">9 өрөө</option>
+											<option value="10">10 өрөө</option>
+											<option value="11">11 өрөө</option>
+											<option value="12">12 өрөө</option>
+											<option value="13">13 өрөө</option>
+											<option value="14">14 өрөө</option>
+										</select>
+									</div>
+									<div class="three wide column">
+										<select class="ui fluid search dropdown">
+											<option value="">Хүний тоо</option>
+											<option value="1">1 хүн</option>
+											<option value="2">2 хүн</option>
+											<option value="3">3 хүн</option>
+											<option value="4">4 хүн</option>
+											<option value="5">5 хүн</option>
+											<option value="6">6 хүн</option>
+											<option value="7">7 хүн</option>
+											<option value="8">8 хүн</option>
+											<option value="9">9 хүн</option>
+											<option value="10">10 хүн</option>
+											<option value="11">11 хүн</option>
+											<option value="12">12 хүн</option>
+											<option value="13">13 хүн</option>
+											<option value="14">14 хүн</option>
+										</select>
 										
+									</div>
+									<div class="two wide column">
+										<div class="fluid ui red button">
+											хайх
+										</div>
 										
 									</div>
 								</div>
-								<div class="four wide column">
-									
-									<label class="room-label">Буудалын од </label>
-									<div class="jplist-panel box panel-top">
-										<div
-											class="jplist-drop-down "
-											data-control-type="filter-drop-down"
-											data-control-name="category-filter"
-											data-control-action="filter">
-											<ul>
-												<li><span data-path="default">Бүx од</span></li>
-												<li><span data-path=".onestar"><i class="icon yellow star"></i></span> 1 </li>
-												<li><span data-path=".twostar"><i class="icon yellow star"></i><i class="icon yellow star"></i></span> 2</li>
-												<li><span data-path=".threestar"><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
-											3 </li>
-											<li><span data-path=".fourstar"><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i></span> 4 </li>
-											<li><span data-path=".fivestar"><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i></span> 5 </li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="three wide column">
-							</div>
-							<div class="three wide column">
-							</div>
-							<div class="two wide column">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="ui search-body container">
-				 
-
-				 
-					<div class="ui stackable two column grid">
-
-						<div class="ui stackable column grid">
-<div class="row">
- 
-								<div class="one column row">
-
-<div class="ui sizer vertical">
-  <div class="ui tiny header"><h6>Хайлтын үрд дүн </h6></div>
-
-</div>
-
-
-</div>
-</div>
-							<div class="list box text-shadow">
-							 
 								
-								<div class="list-item box">
-									<!-- img -->
-									<div class="img left">
-										<img class="ui fluid image" src="img/room.jpg"/>
+								
+								<div class="ui stackable grid">
+									<div class="three wide column">
+										<h4 class="ui header">
+										Хайлтын үр дүн
+										<div class="sub header">Нийт 102 зочид буудал</div>
+										</h4>
 									</div>
 									
-									<!-- data -->
-									<div class="block left">
-										<div class="review">
-											<h4><a href="#">7.5</a></h4>
-										</div>
-									</div>
-									<div class="block right">
-										<div class="price">
-											<h3>190₮</h3>
-										</div>
-										<div class="like-meta">
-											<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
-										</div>
-										<div class="room-name">
-											<h4>Sheraton Grand Chicago gwrgr</h4>
-										</div>
-									</div>
-									<p class="theme">
-										<span class="onestar"><i class="icon yellow star"></i></span>
-									</p>
-									<div class="room-button">
-										<div class="ui right labeled ">
-											
-											<div class="ui dropdown blue label">
-												<div class="text">Захиалах</div>
-												<i class="dropdown icon"></i>
-												<div class="menu">
-													<div class="item"><a href="#">www.ihotel.mn</a></div>
-													<div class="item"><a href="#">www.booking.com</a></div>
-													<div class="item"><a href="#">www.agoda.com</a></div>
-													
-												</div>
-											</div>
-										</div>
-									</div>
-									
-									
-								</div>
-								
-								<div class="list-item box">
-									<!-- img -->
-									<div class="img left">
-										<img class="ui fluid image" src="img/room1.jpg"/>
-									</div>
-									<div class="block left">
-										<div class="review">
-											<h4><a href="#">7.5</a></h4>
-										</div>
-									</div>
-									<!-- data -->
-									<div class="block right">
-										<div class="price">
-											<h3>190₮</h3>
-										</div>
-										<div class="like-meta">
-											<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
-										</div>
-										<div class="room-name">
-											<h4>Sheraton Grand Chicago gwrgr</h4>
-										</div>
-									</div>
-									<p class="theme">
-										<span class="twostar"><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
-									</p>
-									<div class="room-button">
-										<div class="ui right labeled ">
-											
-											<div class="ui dropdown blue label">
-												<div class="text">Захиалах</div>
-												<i class="dropdown icon"></i>
-												<div class="menu">
-													<div class="item"><a href="#">www.ihotel.mn</a></div>
-													<div class="item"><a href="#">www.booking.com</a></div>
-													<div class="item"><a href="#">www.agoda.com</a></div>
-													
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="list-item box">
-									<!-- img -->
-									<div class="img left">
-										<img class="ui fluid image" src="img/room2.jpg"/>
-									</div>
-									<div class="block left">
-										<div class="review">
-											<h4><a href="#">7.5</a></h4>
-										</div>
-									</div>
-									<!-- data -->
-									<div class="block right">
-										<div class="price">
-											<h3>90₮</h3>
-										</div>
-										<div class="like-meta">
-											<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
-										</div>
-										<div class="room-name">
-											<h4>абхэржрнжр эрхжн ух ужэхжэхжрэж</h4>
-										</div>
-									</div>
-									<p class="theme">
-										<span class="threestar"><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
-									</p>
-									<div class="room-button">
-										<div class="ui right labeled ">
-											
-											<div class="ui dropdown blue label">
-												<div class="text">Захиалах</div>
-												<i class="dropdown icon"></i>
-												<div class="menu">
-													<div class="item"><a href="#">www.ihotel.mn</a></div>
-													<div class="item"><a href="#">www.booking.com</a></div>
-													<div class="item"><a href="#">www.agoda.com</a></div>
-													
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="list-item box">
-									<!-- img -->
-									<div class="img left">
-										<img class="ui fluid image" src="img/room3.jpg"/>
-									</div>
-									<div class="block left">
-										<div class="review">
-											<h4><a href="#">7.5</a></h4>
-										</div>
-									</div>
-									<!-- data -->
-									<div class="block right">
-										<div class="price">
-											<h3>90₮</h3>
-										</div>
-										<div class="like-meta">
-											<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
-										</div>
-										<div class="room-name">
-											<h4>абхэржрнжр эрхжн ух ужэхжэхжрэж</h4>
-										</div>
-									</div>
-									<p class="theme">
-										<span class="fourstar"><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
-									</p>
-									<div class="room-button">
-										<div class="ui right labeled ">
-											
-											<div class="ui dropdown blue label">
-												<div class="text">Захиалах</div>
-												<i class="dropdown icon"></i>
-												<div class="menu">
-													<div class="item"><a href="#">www.ihotel.mn</a></div>
-													<div class="item"><a href="#">www.booking.com</a></div>
-													<div class="item"><a href="#">www.agoda.com</a></div>
-													
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="list-item box">
-									<!-- img -->
-									<div class="img left">
-										<img class="ui fluid image" src="img/room3.jpg"/>
-									</div>
-									<div class="block left">
-										<div class="review">
-											<h4><a href="#">7.5</a></h4>
-										</div>
-									</div>
-									<!-- data -->
-									<div class="block right">
-										<div class="price">
-											<h3>90₮</h3>
-										</div>
-										<div class="like-meta">
-											<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
-										</div>
-										<div class="room-name">
-											<h4>абхэржрнжр эрхжн ух ужэхжэхжрэж</h4>
-										</div>
-									</div>
-									<p class="theme">
-										<span class="fivestar"><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
-									</p>
-									<div class="room-button">
-										<div class="ui right labeled ">
-											
-											<div class="ui dropdown blue label">
-												<div class="text">Захиалах</div>
-												<i class="dropdown icon"></i>
-												<div class="menu">
-													<div class="item"><a href="#">www.ihotel.mn</a></div>
-													<div class="item"><a href="#">www.booking.com</a></div>
-													<div class="item"><a href="#">www.agoda.com</a></div>
-													
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="list-item box">
-									<!-- img -->
-									<div class="img left">
-										<img class="ui fluid image" src="img/room3.jpg"/>
-									</div>
-									<div class="block left">
-										<div class="review">
-											<h4><a href="#">7.5</a></h4>
-										</div>
-									</div>
-									<!-- data -->
-									<div class="block right">
-										<div class="price">
-											<h3>90₮</h3>
-										</div>
-										<div class="like-meta">
-											<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
-										</div>
-										<div class="room-name">
-											<h4>абхэржрнжр эрхжн ух ужэхжэхжрэж</h4>
-										</div>
-									</div>
-									<p class="theme">
-										<span class="fivestar"><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
-									</p>
-									<div class="room-button">
-										<div class="ui right labeled ">
-											
-											<div class="ui dropdown blue label">
-												<div class="text">Захиалах</div>
-												<i class="dropdown icon"></i>
-												<div class="menu">
-													<div class="item"><a href="#">www.ihotel.mn</a></div>
-													<div class="item"><a href="#">www.booking.com</a></div>
-													<div class="item"><a href="#">www.agoda.com</a></div>
-													
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="list-item box">
-									<!-- img -->
-									<div class="img left">
-										<img class="ui fluid image" src="img/room3.jpg"/>
-									</div>
-									<div class="block left">
-										<div class="review">
-											<h4><a href="#">7.5</a></h4>
-										</div>
-									</div>
-									<!-- data -->
-									<div class="block right">
-										<div class="price">
-											<h3>90₮</h3>
-										</div>
-										<div class="like-meta">
-											<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
-										</div>
-										<div class="room-name">
-											<h4>абхэржрнжр эрхжн ух ужэхжэхжрэж</h4>
-										</div>
-									</div>
-									<p class="theme">
-										<span class="fivestar"><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
-									</p>
-									<div class="room-button">
-										<div class="ui right labeled ">
-											
-											<div class="ui dropdown blue label">
-												<div class="text">Захиалах</div>
-												<i class="dropdown icon"></i>
-												<div class="menu">
-													<div class="item"><a href="#">www.ihotel.mn</a></div>
-													<div class="item"><a href="#">www.booking.com</a></div>
-													<div class="item"><a href="#">www.agoda.com</a></div>
-													
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="list-item box">
-									<!-- img -->
-									<div class="img left">
-										<img class="ui fluid image" src="img/room3.jpg"/>
-									</div>
-									<div class="block left">
-										<div class="review">
-											<h4><a href="#">7.5</a></h4>
-										</div>
-									</div>
-									<!-- data -->
-									<div class="block right">
-										<div class="price">
-											<h3>90₮</h3>
-										</div>
-										<div class="like-meta">
-											<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
-										</div>
-										<div class="room-name">
-											<h4>абхэржрнжр эрхжн ух ужэхжэхжрэж</h4>
-										</div>
-									</div>
-									<p class="theme">
-										<span class="fivestar"><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
-									</p>
-									<div class="room-button">
-										<div class="ui right labeled ">
-											
-											<div class="ui dropdown blue label">
-												<div class="text">Захиалах</div>
-												<i class="dropdown icon"></i>
-												<div class="menu">
-													<div class="item"><a href="#">www.ihotel.mn</a></div>
-													<div class="item"><a href="#">www.booking.com</a></div>
-													<div class="item"><a href="#">www.agoda.com</a></div>
-													
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="list-item box">
-									<!-- img -->
-									<div class="img left">
-										<img class="ui fluid image" src="img/room3.jpg"/>
-									</div>
-									<div class="block left">
-										<div class="review">
-											<h4><a href="#">7.5</a></h4>
-										</div>
-									</div>
-									<!-- data -->
-									<div class="block right">
-										<div class="price">
-											<h3>90₮</h3>
-										</div>
-										<div class="like-meta">
-											<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
-										</div>
-										<div class="room-name">
-											<h4>абхэржрнжр эрхжн ух ужэхжэхжрэж</h4>
-										</div>
-									</div>
-									<p class="theme">
-										<span class="fivestar"><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
-									</p>
-									<div class="room-button">
-										<div class="ui right labeled ">
-											
-											<div class="ui dropdown blue label">
-												<div class="text">Захиалах</div>
-												<i class="dropdown icon"></i>
-												<div class="menu">
-													<div class="item"><a href="#">www.ihotel.mn</a></div>
-													<div class="item"><a href="#">www.booking.com</a></div>
-													<div class="item"><a href="#">www.agoda.com</a></div>
-													
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="list-item box">
-									<!-- img -->
-									<div class="img left">
-										<img class="ui fluid image" src="img/room3.jpg"/>
-									</div>
-									<div class="block left">
-										<div class="review">
-											<h4><a href="#">7.5</a></h4>
-										</div>
-									</div>
-									<!-- data -->
-									<div class="block right">
-										<div class="price">
-											<h3>90₮</h3>
-										</div>
-										<div class="like-meta">
-											<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
-										</div>
-										<div class="room-name">
-											<h4>абхэржрнжр эрхжн ух ужэхжэхжрэж</h4>
-										</div>
-									</div>
-									<p class="theme">
-										<span class="fivestar"><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
-									</p>
-									<div class="room-button">
-										<div class="ui right labeled ">
-											
-											<div class="ui dropdown blue label">
-												<div class="text">Захиалах</div>
-												<i class="dropdown icon"></i>
-												<div class="menu">
-													<div class="item"><a href="#">www.ihotel.mn</a></div>
-													<div class="item"><a href="#">www.booking.com</a></div>
-													<div class="item"><a href="#">www.agoda.com</a></div>
-													
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="list-item box">
-									<!-- img -->
-									<div class="img left">
-										<img class="ui fluid image" src="img/room3.jpg"/>
-									</div>
-									<div class="block left">
-										<div class="review">
-											<h4><a href="#">7.5</a></h4>
-										</div>
-									</div>
-									<!-- data -->
-									<div class="block right">
-										<div class="price">
-											<h3>90₮</h3>
-										</div>
-										<div class="like-meta">
-											<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
-										</div>
-										<div class="room-name">
-											<h4>абхэржрнжр эрхжн ух ужэхжэхжрэж</h4>
-										</div>
-									</div>
-									<p class="theme">
-										<span class="fivestar"><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
-									</p>
-									<div class="room-button">
-										<div class="ui right labeled ">
-											
-											<div class="ui dropdown blue label">
-												<div class="text">Захиалах</div>
-												<i class="dropdown icon"></i>
-												<div class="menu">
-													<div class="item"><a href="#">www.ihotel.mn</a></div>
-													<div class="item"><a href="#">www.booking.com</a></div>
-													<div class="item"><a href="#">www.agoda.com</a></div>
-													
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="list-item box">
-									<!-- img -->
-									<div class="img left">
-										<img class="ui fluid image" src="img/room3.jpg"/>
-									</div>
-									<div class="block left">
-										<div class="review">
-											<h4><a href="#">7.5</a></h4>
-										</div>
-									</div>
-									<!-- data -->
-									<div class="block right">
-										<div class="price">
-											<h3>90₮</h3>
-										</div>
-										<div class="like-meta">
-											<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
-										</div>
-										<div class="room-name">
-											<h4>абхэржрнжр эрхжн ух ужэхжэхжрэж</h4>
-										</div>
-									</div>
-									<p class="theme">
-										<span class="fivestar"><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
-									</p>
-									<div class="room-button">
-										<div class="ui right labeled ">
-											
-											<div class="ui dropdown blue label">
-												<div class="text">Захиалах</div>
-												<i class="dropdown icon"></i>
-												<div class="menu">
-													<div class="item"><a href="#">www.ihotel.mn</a></div>
-													<div class="item"><a href="#">www.booking.com</a></div>
-													<div class="item"><a href="#">www.agoda.com</a></div>
-													
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="list-item box">
-									<!-- img -->
-									<div class="img left">
-										<img class="ui fluid image" src="img/room3.jpg"/>
-									</div>
-									<div class="block left">
-										<div class="review">
-											<h4><a href="#">7.5</a></h4>
-										</div>
-									</div>
-									<!-- data -->
-									<div class="block right">
-										<div class="price">
-											<h3>90₮</h3>
-										</div>
-										<div class="like-meta">
-											<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
-										</div>
-										<div class="room-name">
-											<h4>абхэржрнжр эрхжн ух ужэхжэхжрэж</h4>
-										</div>
-									</div>
-									<p class="theme">
-										<span class="fivestar"><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
-									</p>
-									<div class="room-button">
-										<div class="ui right labeled ">
-											
-											<div class="ui dropdown blue label">
-												<div class="text">Захиалах</div>
-												<i class="dropdown icon"></i>
-												<div class="menu">
-													<div class="item"><a href="#">www.ihotel.mn</a></div>
-													<div class="item"><a href="#">www.booking.com</a></div>
-													<div class="item"><a href="#">www.agoda.com</a></div>
-													
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="list-item box">
-									<!-- img -->
-									<div class="img left">
-										<img class="ui fluid image" src="img/room3.jpg"/>
-									</div>
-									<div class="block left">
-										<div class="review">
-											<h4><a href="#">7.5</a></h4>
-										</div>
-									</div>
-									<!-- data -->
-									<div class="block right">
-										<div class="price">
-											<h3>90₮</h3>
-										</div>
-										<div class="like-meta">
-											<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
-										</div>
-										<div class="room-name">
-											<h4>абхэржрнжр эрхжн ух ужэхжэхжрэж</h4>
-										</div>
-									</div>
-									<p class="theme">
-										<span class="fivestar"><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
-									</p>
-									<div class="room-button">
-										<div class="ui right labeled ">
-											
-											<div class="ui dropdown blue label">
-												<div class="text">Захиалах</div>
-												<i class="dropdown icon"></i>
-												<div class="menu">
-													<div class="item"><a href="#">www.ihotel.mn</a></div>
-													<div class="item"><a href="#">www.booking.com</a></div>
-													<div class="item"><a href="#">www.agoda.com</a></div>
-													
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="list-item box">
-									<!-- img -->
-									<div class="img left">
-										<img class="ui fluid image" src="img/room3.jpg"/>
-									</div>
-									<div class="block left">
-										<div class="review">
-											<h4><a href="#">7.5</a></h4>
-										</div>
-									</div>
-									<!-- data -->
-									<div class="block right">
-										<div class="price">
-											<h3>90₮</h3>
-										</div>
-										<div class="like-meta">
-											<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
-										</div>
-										<div class="room-name">
-											<h4>абхэржрнжр эрхжн ух ужэхжэхжрэж</h4>
-										</div>
-									</div>
-									<p class="theme">
-										<span class="fivestar"><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
-									</p>
-									<div class="room-button">
-										<div class="ui right labeled ">
-											
-											<div class="ui dropdown blue label">
-												<div class="text">Захиалах</div>
-												<i class="dropdown icon"></i>
-												<div class="menu">
-													<div class="item"><a href="#">www.ihotel.mn</a></div>
-													<div class="item"><a href="#">www.booking.com</a></div>
-													<div class="item"><a href="#">www.agoda.com</a></div>
-													
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="list-item box">
-									<!-- img -->
-									<div class="img left">
-										<img class="ui fluid image" src="img/room3.jpg"/>
-									</div>
-									<div class="block left">
-										<div class="review">
-											<h4><a href="#">7.5</a></h4>
-										</div>
-									</div>
-									<!-- data -->
-									<div class="block right">
-										<div class="price">
-											<h3>90₮</h3>
-										</div>
-										<div class="like-meta">
-											<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
-										</div>
-										<div class="room-name">
-											<h4>абхэржрнжр эрхжн ух ужэхжэхжрэж</h4>
-										</div>
-									</div>
-									<p class="theme">
-										<span class="fivestar"><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
-									</p>
-									<div class="room-button">
-										<div class="ui right labeled ">
-											
-											<div class="ui dropdown blue label">
-												<div class="text">Захиалах</div>
-												<i class="dropdown icon"></i>
-												<div class="menu">
-													<div class="item"><a href="#">www.ihotel.mn</a></div>
-													<div class="item"><a href="#">www.booking.com</a></div>
-													<div class="item"><a href="#">www.agoda.com</a></div>
-													
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="list-item box">
-									<!-- img -->
-									<div class="img left">
-										<img class="ui fluid image" src="img/room3.jpg"/>
-									</div>
-									<div class="block left">
-										<div class="review">
-											<h4><a href="#">7.5</a></h4>
-										</div>
-									</div>
-									<!-- data -->
-									<div class="block right">
-										<div class="price">
-											<h3>90₮</h3>
-										</div>
-										<div class="like-meta">
-											<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
-										</div>
-										<div class="room-name">
-											<h4>абхэржрнжр эрхжн ух ужэхжэхжрэж</h4>
-										</div>
-									</div>
-									<p class="theme">
-										<span class="fivestar"><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
-									</p>
-									<div class="room-button">
-										<div class="ui right labeled ">
-											
-											<div class="ui dropdown blue label">
-												<div class="text">Захиалах</div>
-												<i class="dropdown icon"></i>
-												<div class="menu">
-													<div class="item"><a href="#">www.ihotel.mn</a></div>
-													<div class="item"><a href="#">www.booking.com</a></div>
-													<div class="item"><a href="#">www.agoda.com</a></div>
-													
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="list-item box">
-									<!-- img -->
-									<div class="img left">
-										<img class="ui fluid image" src="img/room3.jpg"/>
-									</div>
-									<div class="block left">
-										<div class="review">
-											<h4><a href="#">7.5</a></h4>
-										</div>
-									</div>
-									<!-- data -->
-									<div class="block right">
-										<div class="price">
-											<h3>90₮</h3>
-										</div>
-										<div class="like-meta">
-											<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
-										</div>
-										<div class="room-name">
-											<h4>абхэржрнжр эрхжн ух ужэхжэхжрэж</h4>
-										</div>
-									</div>
-									<p class="theme">
-										<span class="fivestar"><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
-									</p>
-									<div class="room-button">
-										<div class="ui right labeled ">
-											
-											<div class="ui dropdown blue label">
-												<div class="text">Захиалах</div>
-												<i class="dropdown icon"></i>
-												<div class="menu">
-													<div class="item"><a href="#">www.ihotel.mn</a></div>
-													<div class="item"><a href="#">www.booking.com</a></div>
-													<div class="item"><a href="#">www.agoda.com</a></div>
-													
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="list-item box">
-									<!-- img -->
-									<div class="img left">
-										<img class="ui fluid image" src="img/room3.jpg"/>
-									</div>
-									<div class="block left">
-										<div class="review">
-											<h4><a href="#">7.5</a></h4>
-										</div>
-									</div>
-									<!-- data -->
-									<div class="block right">
-										<div class="price">
-											<h3>90₮</h3>
-										</div>
-										<div class="like-meta">
-											<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
-										</div>
-										<div class="room-name">
-											<h4>абхэржрнжр эрхжн ух ужэхжэхжрэж</h4>
-										</div>
-									</div>
-									<p class="theme">
-										<span class="fivestar"><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
-									</p>
-									<div class="room-button">
-										<div class="ui right labeled ">
-											
-											<div class="ui dropdown blue label">
-												<div class="text">Захиалах</div>
-												<i class="dropdown icon"></i>
-												<div class="menu">
-													<div class="item"><a href="#">www.ihotel.mn</a></div>
-													<div class="item"><a href="#">www.booking.com</a></div>
-													<div class="item"><a href="#">www.agoda.com</a></div>
-													
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="list-item box">
-									<!-- img -->
-									<div class="img left">
-										<img class="ui fluid image" src="img/room3.jpg"/>
-									</div>
-									<div class="block left">
-										<div class="review">
-											<h4><a href="#">7.5</a></h4>
-										</div>
-									</div>
-									<!-- data -->
-									<div class="block right">
-										<div class="price">
-											<h3>90₮</h3>
-										</div>
-										<div class="like-meta">
-											<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
-										</div>
-										<div class="room-name">
-											<h4>абхэржрнжр эрхжн ух ужэхжэхжрэж</h4>
-										</div>
-									</div>
-									<p class="theme">
-										<span class="fivestar"><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
-									</p>
-									<div class="room-button">
-										<div class="ui right labeled ">
-											
-											<div class="ui dropdown blue label">
-												<div class="text">Захиалах</div>
-												<i class="dropdown icon"></i>
-												<div class="menu">
-													<div class="item"><a href="#">www.ihotel.mn</a></div>
-													<div class="item"><a href="#">www.booking.com</a></div>
-													<div class="item"><a href="#">www.agoda.com</a></div>
-													
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="list-item box">
-									<!-- img -->
-									<div class="img left">
-										<img class="ui fluid image" src="img/room3.jpg"/>
-									</div>
-									<div class="block left">
-										<div class="review">
-											<h4><a href="#">7.5</a></h4>
-										</div>
-									</div>
-									<!-- data -->
-									<div class="block right">
-										<div class="price">
-											<h3>90₮</h3>
-										</div>
-										<div class="like-meta">
-											<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
-										</div>
-										<div class="room-name">
-											<h4>абхэржрнжр эрхжн ух ужэхжэхжрэж</h4>
-										</div>
-									</div>
-									<p class="theme">
-										<span class="fivestar"><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
-									</p>
-									<div class="room-button">
-										<div class="ui right labeled ">
-											
-											<div class="ui dropdown blue label">
-												<div class="text">Захиалах</div>
-												<i class="dropdown icon"></i>
-												<div class="menu">
-													<div class="item"><a href="#">www.ihotel.mn</a></div>
-													<div class="item"><a href="#">www.booking.com</a></div>
-													<div class="item"><a href="#">www.agoda.com</a></div>
-													
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								
-								
-							</div>
-							
-							
-							<div class="box jplist-no-results text-shadow align-center">
-								<p>Буудал олдсонгүй</p>
-							</div>
-							
-							<div class="jplist-ios-button">
-								<i class="fa fa-sort"></i>
-								jPList Actions
-							</div>
-							
-							<div class="row">
-								<div class="one column row">
-									<div class="room-page">
+									<div class="four wide column">
+										
 										<div class="jplist-panel box panel-top">
 											
+											<div
+												class="jplist-range-slider"
+												data-control-type="range-slider"
+												data-control-name="range-slider-prices"
+												data-control-action="filter"
+												data-path=".price"
+												data-slider-func="pricesSlider"
+												data-setvalues-func="priesValues">
+												
+												<div class="value" data-type="prev-value"></div>
+												<div class="ui-slider" data-type="ui-slider"></div>
+												<div class="value" data-type="next-value"></div>
+											</div>
+											
+											
+										</div>
+									</div>
+									<div class="two wide column">
+										
+										
+										<div class="jplist-panel box panel-top">
+											<div
+												class="jplist-drop-down "
+												data-control-type="filter-drop-down"
+												data-control-name="category-filter"
+												data-control-action="filter">
+												<ul>
+													<li><span data-path="default">Бүx од</span></li>
+													<li><span data-path=".onestar"><i class="icon yellow star"></i></span> 1 </li>
+													<li><span data-path=".twostar"><i class="icon yellow star"></i><i class="icon yellow star"></i></span> 2</li>
+													<li><span data-path=".threestar"><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
+												3 </li>
+												<li><span data-path=".fourstar"><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i></span> 4 </li>
+												<li><span data-path=".fivestar"><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i><i class="icon yellow star"></i></span> 5 </li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="right aligned seven wide column">
+									
+									<div class="ui breadcrumb">
+										<a class="section">Эхлэл</a>
+										<span class="divider">/</span>
+										<div class="active section">Түгээмэл асуултууд</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="ui stackable search-content container">
+						
+						
+						<div class="ui stackable two column grid">
+							<div class="row">
+								
+								<div class="search-result column">
+									<div class="list box text-shadow">
+										
+										<div class="list-item box">
+											<!-- img -->
+											<div class="img left">
+												<img class="ui fluid image" src="img/room1.jpg"/>
+											</div>
+											<div class="block left">
+												<div class="review">
+													<h4><a href="#">7.5</a></h4>
+												</div>
+											</div>
+											<!-- data -->
+											<div class="block right">
+												<div class="price">
+													<h4>1000₮</h4>
+												</div>
+												<div class="like-meta">
+													<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
+												</div>
+												<div class="room-name">
+													<h4>Corporate Hotel And Convention</h4>
+												</div>
+											</div>
+											<p class="theme">
+												<span class="twostar"><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
+											</p>
+											<div class="room-button">
+												<div class="ui right labeled ">
+													
+													<div class="ui dropdown blue label">
+														<div class="text">ЗАХИАЛАХ</div>
+														<i class="dropdown icon"></i>
+														<div class="menu">
+															<div class="item"><a href="#"><img class="ui small image" src="img/logo.png"></a></div>
+															<div class="item"><a target="_blance" href="https://www.booking.com/"><img class="ui small image" src="img/booking.png"></a></div>
+															<div class="item"><a target="_blance" href="https://www.agoda.com/"><img class="ui small image" src="img/agado.png"></a></div>
+															
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										
+										<div class="list-item box">
+											<!-- img -->
+											<div class="img left">
+												<img class="ui fluid image" src="img/room1.jpg"/>
+											</div>
+											<div class="block left">
+												<div class="review">
+													<h4><a href="#">7.5</a></h4>
+												</div>
+											</div>
+											<!-- data -->
+											<div class="block right">
+												<div class="price">
+													<h4>1000₮</h4>
+												</div>
+												<div class="like-meta">
+													<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
+												</div>
+												<div class="room-name">
+													<h4>Corporate Hotel And Convention</h4>
+												</div>
+											</div>
+											<p class="theme">
+												<span class="twostar"><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
+											</p>
+											<div class="room-button">
+												<div class="ui right labeled ">
+													
+													<div class="ui dropdown blue label">
+														<div class="text">ЗАХИАЛАХ</div>
+														<i class="dropdown icon"></i>
+														<div class="menu">
+															<div class="item"><a href="#"><img class="ui small image" src="img/logo.png"></a></div>
+															<div class="item"><a target="_blance" href="https://www.booking.com/"><img class="ui small image" src="img/booking.png"></a></div>
+															<div class="item"><a target="_blance" href="https://www.agoda.com/"><img class="ui small image" src="img/agado.png"></a></div>
+															
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="list-item box">
+											<!-- img -->
+											<div class="img left">
+												<img class="ui fluid image" src="img/room1.jpg"/>
+											</div>
+											<div class="block left">
+												<div class="review">
+													<h4><a href="#">7.5</a></h4>
+												</div>
+											</div>
+											<!-- data -->
+											<div class="block right">
+												<div class="price">
+													<h4>1000₮</h4>
+												</div>
+												<div class="like-meta">
+													<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
+												</div>
+												<div class="room-name">
+													<h4>Corporate Hotel And Convention</h4>
+												</div>
+											</div>
+											<p class="theme">
+												<span class="twostar"><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
+											</p>
+											<div class="room-button">
+												<div class="ui right labeled ">
+													
+													<div class="ui dropdown blue label">
+														<div class="text">ЗАХИАЛАХ</div>
+														<i class="dropdown icon"></i>
+														<div class="menu">
+															<div class="item"><a href="#"><img class="ui small image" src="img/logo.png"></a></div>
+															<div class="item"><a target="_blance" href="https://www.booking.com/"><img class="ui small image" src="img/booking.png"></a></div>
+															<div class="item"><a target="_blance" href="https://www.agoda.com/"><img class="ui small image" src="img/agado.png"></a></div>
+															
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="list-item box">
+											<!-- img -->
+											<div class="img left">
+												<img class="ui fluid image" src="img/room1.jpg"/>
+											</div>
+											<div class="block left">
+												<div class="review">
+													<h4><a href="#">7.5</a></h4>
+												</div>
+											</div>
+											<!-- data -->
+											<div class="block right">
+												<div class="price">
+													<h4>1000₮</h4>
+												</div>
+												<div class="like-meta">
+													<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
+												</div>
+												<div class="room-name">
+													<h4>Corporate Hotel And Convention</h4>
+												</div>
+											</div>
+											<p class="theme">
+												<span class="twostar"><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
+											</p>
+											<div class="room-button">
+												<div class="ui right labeled ">
+													
+													<div class="ui dropdown blue label">
+														<div class="text">ЗАХИАЛАХ</div>
+														<i class="dropdown icon"></i>
+														<div class="menu">
+															<div class="item"><a href="#"><img class="ui small image" src="img/logo.png"></a></div>
+															<div class="item"><a target="_blance" href="https://www.booking.com/"><img class="ui small image" src="img/booking.png"></a></div>
+															<div class="item"><a target="_blance" href="https://www.agoda.com/"><img class="ui small image" src="img/agado.png"></a></div>
+															
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="list-item box">
+											<!-- img -->
+											<div class="img left">
+												<img class="ui fluid image" src="img/room1.jpg"/>
+											</div>
+											<div class="block left">
+												<div class="review">
+													<h4><a href="#">7.5</a></h4>
+												</div>
+											</div>
+											<!-- data -->
+											<div class="block right">
+												<div class="price">
+													<h4>1000₮</h4>
+												</div>
+												<div class="like-meta">
+													<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
+												</div>
+												<div class="room-name">
+													<h4>Corporate Hotel And Convention</h4>
+												</div>
+											</div>
+											<p class="theme">
+												<span class="twostar"><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
+											</p>
+											<div class="room-button">
+												<div class="ui right labeled ">
+													
+													<div class="ui dropdown blue label">
+														<div class="text">ЗАХИАЛАХ</div>
+														<i class="dropdown icon"></i>
+														<div class="menu">
+															<div class="item"><a href="#"><img class="ui small image" src="img/logo.png"></a></div>
+															<div class="item"><a target="_blance" href="https://www.booking.com/"><img class="ui small image" src="img/booking.png"></a></div>
+															<div class="item"><a target="_blance" href="https://www.agoda.com/"><img class="ui small image" src="img/agado.png"></a></div>
+															
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="list-item box">
+											<!-- img -->
+											<div class="img left">
+												<img class="ui fluid image" src="img/room1.jpg"/>
+											</div>
+											<div class="block left">
+												<div class="review">
+													<h4><a href="#">7.5</a></h4>
+												</div>
+											</div>
+											<!-- data -->
+											<div class="block right">
+												<div class="price">
+													<h4>1000₮</h4>
+												</div>
+												<div class="like-meta">
+													<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
+												</div>
+												<div class="room-name">
+													<h4>Corporate Hotel And Convention</h4>
+												</div>
+											</div>
+											<p class="theme">
+												<span class="twostar"><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
+											</p>
+											<div class="room-button">
+												<div class="ui right labeled ">
+													
+													<div class="ui dropdown blue label">
+														<div class="text">ЗАХИАЛАХ</div>
+														<i class="dropdown icon"></i>
+														<div class="menu">
+															<div class="item"><a href="#"><img class="ui small image" src="img/logo.png"></a></div>
+															<div class="item"><a target="_blance" href="https://www.booking.com/"><img class="ui small image" src="img/booking.png"></a></div>
+															<div class="item"><a target="_blance" href="https://www.agoda.com/"><img class="ui small image" src="img/agado.png"></a></div>
+															
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="list-item box">
+											<!-- img -->
+											<div class="img left">
+												<img class="ui fluid image" src="img/room1.jpg"/>
+											</div>
+											<div class="block left">
+												<div class="review">
+													<h4><a href="#">7.5</a></h4>
+												</div>
+											</div>
+											<!-- data -->
+											<div class="block right">
+												<div class="price">
+													<h4>1000₮</h4>
+												</div>
+												<div class="like-meta">
+													<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
+												</div>
+												<div class="room-name">
+													<h4>Corporate Hotel And Convention</h4>
+												</div>
+											</div>
+											<p class="theme">
+												<span class="twostar"><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
+											</p>
+											<div class="room-button">
+												<div class="ui right labeled ">
+													
+													<div class="ui dropdown blue label">
+														<div class="text">ЗАХИАЛАХ</div>
+														<i class="dropdown icon"></i>
+														<div class="menu">
+															<div class="item"><a href="#"><img class="ui small image" src="img/logo.png"></a></div>
+															<div class="item"><a target="_blance" href="https://www.booking.com/"><img class="ui small image" src="img/booking.png"></a></div>
+															<div class="item"><a target="_blance" href="https://www.agoda.com/"><img class="ui small image" src="img/agado.png"></a></div>
+															
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="list-item box">
+											<!-- img -->
+											<div class="img left">
+												<img class="ui fluid image" src="img/room1.jpg"/>
+											</div>
+											<div class="block left">
+												<div class="review">
+													<h4><a href="#">7.5</a></h4>
+												</div>
+											</div>
+											<!-- data -->
+											<div class="block right">
+												<div class="price">
+													<h4>1000₮</h4>
+												</div>
+												<div class="like-meta">
+													<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
+												</div>
+												<div class="room-name">
+													<h4>Corporate Hotel And Convention</h4>
+												</div>
+											</div>
+											<p class="theme">
+												<span class="twostar"><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
+											</p>
+											<div class="room-button">
+												<div class="ui right labeled ">
+													
+													<div class="ui dropdown blue label">
+														<div class="text">ЗАХИАЛАХ</div>
+														<i class="dropdown icon"></i>
+														<div class="menu">
+															<div class="item"><a href="#"><img class="ui small image" src="img/logo.png"></a></div>
+															<div class="item"><a target="_blance" href="https://www.booking.com/"><img class="ui small image" src="img/booking.png"></a></div>
+															<div class="item"><a target="_blance" href="https://www.agoda.com/"><img class="ui small image" src="img/agado.png"></a></div>
+															
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="list-item box">
+											<!-- img -->
+											<div class="img left">
+												<img class="ui fluid image" src="img/room1.jpg"/>
+											</div>
+											<div class="block left">
+												<div class="review">
+													<h4><a href="#">7.5</a></h4>
+												</div>
+											</div>
+											<!-- data -->
+											<div class="block right">
+												<div class="price">
+													<h4>1000₮</h4>
+												</div>
+												<div class="like-meta">
+													<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
+												</div>
+												<div class="room-name">
+													<h4>Corporate Hotel And Convention</h4>
+												</div>
+											</div>
+											<p class="theme">
+												<span class="twostar"><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
+											</p>
+											<div class="room-button">
+												<div class="ui right labeled ">
+													
+													<div class="ui dropdown blue label">
+														<div class="text">ЗАХИАЛАХ</div>
+														<i class="dropdown icon"></i>
+														<div class="menu">
+															<div class="item"><a href="#"><img class="ui small image" src="img/logo.png"></a></div>
+															<div class="item"><a target="_blance" href="https://www.booking.com/"><img class="ui small image" src="img/booking.png"></a></div>
+															<div class="item"><a target="_blance" href="https://www.agoda.com/"><img class="ui small image" src="img/agado.png"></a></div>
+															
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="list-item box">
+											<!-- img -->
+											<div class="img left">
+												<img class="ui fluid image" src="img/room1.jpg"/>
+											</div>
+											<div class="block left">
+												<div class="review">
+													<h4><a href="#">7.5</a></h4>
+												</div>
+											</div>
+											<!-- data -->
+											<div class="block right">
+												<div class="price">
+													<h4>1000₮</h4>
+												</div>
+												<div class="like-meta">
+													<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
+												</div>
+												<div class="room-name">
+													<h4>Corporate Hotel And Convention</h4>
+												</div>
+											</div>
+											<p class="theme">
+												<span class="twostar"><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
+											</p>
+											<div class="room-button">
+												<div class="ui right labeled ">
+													
+													<div class="ui dropdown blue label">
+														<div class="text">ЗАХИАЛАХ</div>
+														<i class="dropdown icon"></i>
+														<div class="menu">
+															<div class="item"><a href="#"><img class="ui small image" src="img/logo.png"></a></div>
+															<div class="item"><a target="_blance" href="https://www.booking.com/"><img class="ui small image" src="img/booking.png"></a></div>
+															<div class="item"><a target="_blance" href="https://www.agoda.com/"><img class="ui small image" src="img/agado.png"></a></div>
+															
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="list-item box">
+											<!-- img -->
+											<div class="img left">
+												<img class="ui fluid image" src="img/room1.jpg"/>
+											</div>
+											<div class="block left">
+												<div class="review">
+													<h4><a href="#">7.5</a></h4>
+												</div>
+											</div>
+											<!-- data -->
+											<div class="block right">
+												<div class="price">
+													<h4>1000₮</h4>
+												</div>
+												<div class="like-meta">
+													<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
+												</div>
+												<div class="room-name">
+													<h4>Corporate Hotel And Convention</h4>
+												</div>
+											</div>
+											<p class="theme">
+												<span class="twostar"><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
+											</p>
+											<div class="room-button">
+												<div class="ui right labeled ">
+													
+													<div class="ui dropdown blue label">
+														<div class="text">ЗАХИАЛАХ</div>
+														<i class="dropdown icon"></i>
+														<div class="menu">
+															<div class="item"><a href="#"><img class="ui small image" src="img/logo.png"></a></div>
+															<div class="item"><a target="_blance" href="https://www.booking.com/"><img class="ui small image" src="img/booking.png"></a></div>
+															<div class="item"><a target="_blance" href="https://www.agoda.com/"><img class="ui small image" src="img/agado.png"></a></div>
+															
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="list-item box">
+											<!-- img -->
+											<div class="img left">
+												<img class="ui fluid image" src="img/room1.jpg"/>
+											</div>
+											<div class="block left">
+												<div class="review">
+													<h4><a href="#">7.5</a></h4>
+												</div>
+											</div>
+											<!-- data -->
+											<div class="block right">
+												<div class="price">
+													<h4>1000₮</h4>
+												</div>
+												<div class="like-meta">
+													<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
+												</div>
+												<div class="room-name">
+													<h4>Corporate Hotel And Convention</h4>
+												</div>
+											</div>
+											<p class="theme">
+												<span class="twostar"><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
+											</p>
+											<div class="room-button">
+												<div class="ui right labeled ">
+													
+													<div class="ui dropdown blue label">
+														<div class="text">ЗАХИАЛАХ</div>
+														<i class="dropdown icon"></i>
+														<div class="menu">
+															<div class="item"><a href="#"><img class="ui small image" src="img/logo.png"></a></div>
+															<div class="item"><a target="_blance" href="https://www.booking.com/"><img class="ui small image" src="img/booking.png"></a></div>
+															<div class="item"><a target="_blance" href="https://www.agoda.com/"><img class="ui small image" src="img/agado.png"></a></div>
+															
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="list-item box">
+											<!-- img -->
+											<div class="img left">
+												<img class="ui fluid image" src="img/room1.jpg"/>
+											</div>
+											<div class="block left">
+												<div class="review">
+													<h4><a href="#">7.5</a></h4>
+												</div>
+											</div>
+											<!-- data -->
+											<div class="block right">
+												<div class="price">
+													<h4>1000₮</h4>
+												</div>
+												<div class="like-meta">
+													<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
+												</div>
+												<div class="room-name">
+													<h4>Corporate Hotel And Convention</h4>
+												</div>
+											</div>
+											<p class="theme">
+												<span class="twostar"><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
+											</p>
+											<div class="room-button">
+												<div class="ui right labeled ">
+													
+													<div class="ui dropdown blue label">
+														<div class="text">ЗАХИАЛАХ</div>
+														<i class="dropdown icon"></i>
+														<div class="menu">
+															<div class="item"><a href="#"><img class="ui small image" src="img/logo.png"></a></div>
+															<div class="item"><a target="_blance" href="https://www.booking.com/"><img class="ui small image" src="img/booking.png"></a></div>
+															<div class="item"><a target="_blance" href="https://www.agoda.com/"><img class="ui small image" src="img/agado.png"></a></div>
+															
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="list-item box">
+											<!-- img -->
+											<div class="img left">
+												<img class="ui fluid image" src="img/room1.jpg"/>
+											</div>
+											<div class="block left">
+												<div class="review">
+													<h4><a href="#">7.5</a></h4>
+												</div>
+											</div>
+											<!-- data -->
+											<div class="block right">
+												<div class="price">
+													<h4>1000₮</h4>
+												</div>
+												<div class="like-meta">
+													<div class="ui heart rating" data-rating="0" data-max-rating="1"></div>
+												</div>
+												<div class="room-name">
+													<h4>Corporate Hotel And Convention</h4>
+												</div>
+											</div>
+											<p class="theme">
+												<span class="twostar"><i class="icon yellow star"></i><i class="icon yellow star"></i></span>
+											</p>
+											<div class="room-button">
+												<div class="ui right labeled ">
+													
+													<div class="ui dropdown blue label">
+														<div class="text">ЗАХИАЛАХ</div>
+														<i class="dropdown icon"></i>
+														<div class="menu">
+															<div class="item"><a href="#"><img class="ui small image" src="img/logo.png"></a></div>
+															<div class="item"><a target="_blance" href="https://www.booking.com/"><img class="ui small image" src="img/booking.png"></a></div>
+															<div class="item"><a target="_blance" href="https://www.agoda.com/"><img class="ui small image" src="img/agado.png"></a></div>
+															
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+									</div>
+									
+									
+									<div class="box jplist-no-results text-shadow align-center">
+										
+										<div class="ui negative message">
+											
+											<div class="ui centered header">
+												Буудал олдсонгүй
+											</div>
+										</div>
+									</div>
+									
+									
+									
+									
+									
+									
+									<div class="room-page">
+										<div class="jplist-panel box panel-top">
 											<div
 												class="jplist-label"
 												data-type="хуудас {current}-{pages}"
@@ -1132,153 +825,151 @@
 												data-control-action="paging"
 												data-items-per-page="10">
 											</div>
-											
 										</div>
-										
+									</div>
+									
+									
+									
+									
+									
+								</div>
+								
+								<div class="search-google-map column">
+									
+									<div class="ihotel-google-map column">
+										<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10695.015314249611!2d106.9234363!3d47.9218005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d9692410e9a41b5%3A0x3372eb2a5a6155bf!2sNational+Information+Technology+Park!5e0!3m2!1sen!2smn!4v1476256956346" width="100%" height="700px" frameborder="0" style="border:0" allowfullscreen></iframe>
 									</div>
 								</div>
 							</div>
-						</div>
-						
-						<div class="ui stackable column grid">
 							
-							<div class="ihotel-google-map column">
-								<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10695.015314249611!2d106.9234363!3d47.9218005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d9692410e9a41b5%3A0x3372eb2a5a6155bf!2sNational+Information+Technology+Park!5e0!3m2!1sen!2smn!4v1476256956346" width="100%" height="700px" frameborder="0" style="border:0" allowfullscreen></iframe>
-							</div>
 						</div>
 					</div>
-					
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-</div>
 <div class="ui inverted vertical footer segment">
-<div class="ui center aligned container">
-	<div class="ui stackable divided grid">
-		<div class="two wide column footer-menu"></div>
-		<div class="four wide column">
-			
-			<h4 class="ui inverted header">Үндсэн цэс</h4>
-			<div class="ui inverted link list">
-				<a href="#" class="item">Улс орнууд</a>
-				<a href="#" class="item">Аялах сэдэл</a>
-				<a href="#" class="item">Түгээмэл асуултууд</a>
-				<a href="#" class="item">Үйлчилгээний нөхцөл</a>
+	<div class="ui center aligned container">
+		<div class="ui stackable divided grid">
+			<div class="five wide column">
+				<h4 class="ui inverted header">Үндсэн цэс</h4>
+				<div class="ui inverted link list">
+					<a href="#" class="item">Улс орнууд</a>
+					<a href="#" class="item">Аялах сэдэл</a>
+					<a href="#" class="item">Түгээмэл асуултууд</a>
+					<a href="#" class="item">Үйлчилгээний нөхцөл</a>
+				</div>
+			</div>
+			<div class="six wide column footer-menu">
+				<h4 class="ui inverted header">Бидэнтэй хамтрах</h4>
+				<div class="ui inverted link list">
+					<a href="#" class="item">Буудал нэмэх</a>
+					<a href="#" class="item">Өрөөний удирдлагын систем</a>
+					<a href="#" class="item">Гэрээт борлуулагч</a>
+					<a href="#" class="item">Групп захиалга</a>
+				</div>
+			</div>
+			<div class="five wide column footer-menu">
+				<h4 class="ui inverted header">Бидний тухай</h4>
+				<div class="ui inverted link list">
+					<a href="#" class="item">iHotel гэж юу вэ?</a>
+					<a href="#" class="item">Бидний давуу тал</a>
+					<a href="#" class="item">Бид хэн бэ?</a>
+					<a href="#" class="item">Холбоо барих</a>
+				</div>
 			</div>
 		</div>
-		<div class="four wide column footer-menu">
-			<h4 class="ui inverted header">Бидэнтэй хамтрах</h4>
-			<div class="ui inverted link list">
-				<a href="#" class="item">Буудал нэмэх</a>
-				<a href="#" class="item">Өрөөний удирдлагын систем</a>
-				<a href="#" class="item">Гэрээт борлуулагч</a>
-				<a href="#" class="item">Групп захиалга</a>
-			</div>
-		</div>
-		<div class="four wide column footer-menu">
-			<h4 class="ui inverted header">Бидний тухай</h4>
-			<div class="ui inverted link list">
-				<a href="#" class="item">iHotel гэж юу вэ?</a>
-				<a href="#" class="item">Бидний давуу тал</a>
-				<a href="#" class="item">Бид хэн бэ?</a>
-				<a href="#" class="item">Холбоо барих</a>
-			</div>
-		</div>
-		<div class="two wide column footer-menu"></div>
+		<div class="ui divider"></div>
 	</div>
-	<div class="ui divider"></div>
-</div>
-<div class="ui center aligned container copyright">
-	<div class="ui relaxed grid">
-		<div class="three column row">
-			<div class="column"></div>
-			<div class="column"><h5>© copyright 2016 www.iHotel.mn - <a href="#">Айхотел ххк</a></h5></div>
-			<div class="column">
-				
-				<ul class="social-link">
-					<li><a><i class="icon facebook"></i></a></li>
-					<li><a><i class="icon twitter"></i></a></li>
-					<li><a><i class="icon google plus"></i></a></li>
-					<li><a><i class="icon linkedin"></i></a></li>
-					<li><a><i class="icon instagram"></i></a></li>
-				</ul>
+	<div class="copyright">
+		<div class="ui center aligned stackable container">
+			<div class="ui stackable grid">
+				<div class="three column row">
+					<div class="column"></div>
+					<div class="column"><h5>© copyright 2016 www.iHotel.mn - <a href="#">Айхотел ххк</a></h5></div>
+					<div class="column">
+						
+						<ul class="social-link">
+							<li><a><i class="icon facebook"></i></a></li>
+							<li><a><i class="icon twitter"></i></a></li>
+							<li><a><i class="icon google plus"></i></a></li>
+							<li><a><i class="icon linkedin"></i></a></li>
+							<li><a><i class="icon instagram"></i></a></li>
+						</ul>
+						
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
 </div>
 <!-- login heseg -->
 <div class="cd-user-modal">
-<div class="cd-user-modal-container">
-	<ul class="cd-switcher">
-		<li><a href="#0">Нэтврэх</a></li>
-		<li><a href="#0">Бүртгүүлэх</a></li>
-	</ul>
-	<div id="cd-login">
-		<form class="ui form">
-			<div class="field">
-				<label>Имэйл</label>
-				<input type="text" name="first-name" placeholder="Имэйл">
-			</div>
-			<div class="field">
-				<label>Нууц үг</label>
-				<input type="password" name="last-name" placeholder="Нууц үг">
-			</div>
-			<div class="field">
-				<div class="ui checkbox">
-					<input type="checkbox" tabindex="0" class="hidden">
-					<label>Намайг сануулах</label>
+	<div class="cd-user-modal-container">
+		<ul class="cd-switcher">
+			<li><a href="#0">Нэтврэх</a></li>
+			<li><a href="#0">Бүртгүүлэх</a></li>
+		</ul>
+		<div id="cd-login">
+			<form class="ui form">
+				<div class="field">
+					<input type="text" name="first-name" placeholder="Имэйл">
 				</div>
-			</div>
-			<button class="ui fluid button" type="submit">НЭВТРЭХ</button>
-		</form>
-		
-		<p class="cd-form-bottom-message"><a href="#0">Нууц үгээ мартсан уу?</a></p>
-		
-	</div>
-	<div id="cd-signup">
-		<form class="ui form">
-			<div class="field">
-				<label>Нэр</label>
-				<input type="text" name="first-name" placeholder="Имэйл">
-			</div>
-			<div class="field">
-				<label>Имэйл</label>
-				<input type="text" name="first-name" placeholder="Имэйл">
-			</div>
-			<div class="field">
-				<label>Нууц үг</label>
-				<input type="password" name="last-name" placeholder="Нууц үг">
-			</div>
-			<div class="field">
-				<div class="ui checkbox">
-					<input type="checkbox" tabindex="0" class="hidden">
-					<label> Би зөвшөөрч байна!</label>
+				<div class="field">
 					
+					<input type="password" name="last-name" placeholder="Нууц үг">
 				</div>
-				<label  class="security"><a href="#">Манай сайтны дүрэмтэй танилцан уу!!!</a></label>
-			</div>
-			<button class="ui fluid button" type="submit">БҮРТГҮҮЛЭХ</button>
-		</form>
-		
-		
+				<div class="field">
+					<div class="ui checkbox">
+						<input type="checkbox" tabindex="0" class="hidden">
+						<label>Намайг сануулах</label>
+					</div>
+				</div>
+				<div class="field">
+					<button class="ui default fluid button" type="submit">НЭВТРЭХ</button>
+				</div>
+				<div class="field">
+					<button class="ui fluid facebook button"><i class="facebook icon"></i>Facebook</button>
+				</div>
+				
+				<button class="ui fluid google plus button"><i class="google plus icon"></i>Google Plus</button>
+				<p class="cd-form-bottom-message"><a href="#0">Нууц үгээ мартсан уу?</a></p>
+			</form>
+		</div>
+		<div id="cd-signup">
+			<form class="ui form">
+				<div class="field">
+					<input type="text" name="first-name" placeholder="Имэйл">
+				</div>
+				<div class="field">
+					<input type="text" name="first-name" placeholder="Имэйл">
+				</div>
+				<div class="field">
+					<input type="password" name="last-name" placeholder="Нууц үг">
+				</div>
+				<div class="field">
+					<div class="ui checkbox">
+						<input type="checkbox" tabindex="0" class="hidden">
+						<label> Би зөвшөөрч байна!</label>
+					</div>
+				</div>
+				<button class="ui fluid button" type="submit">БҮРТГҮҮЛЭХ</button>
+				<p><a href="#">Манай сайтны дүрэмтэй танилцан уу!!!</a></p>
+			</form>
+		</div>
+		<div id="cd-reset-password">
+			<p class="ui center aligned container">Та нууц үгээ мартсан уу? Та манай сайтанд бүртгүүлсэн бүртгэлтэй имэйл хаягаа оруулна уу!</p>
+			<form class="ui form">
+				<div class="field">
+					
+					<input type="text" name="first-name" placeholder="Имэйл">
+				</div>
+				<button class="ui fluid button" type="submit">Нууц үг илгээх</button>
+				<p class="cd-form-bottom-message"><a href="#0">Буцах</a></p>
+			</form>
+		</div>
 	</div>
-	<div id="cd-reset-password">
-		<p class="ui center aligned container">Та нууц үгээ мартсан уу? Та манай сайтанд бүртгүүлсэн бүртгэлтэй имэйл хаягаа оруулна уу!</p>
-		<form class="ui form">
-			<div class="field">
-				<label>Имэйл</label>
-				<input type="text" name="first-name" placeholder="Имэйл">
-			</div>
-			<button class="ui fluid button" type="submit">Нууц үг илгээх</button>
-			
-		</form>
-		<p class="cd-form-bottom-message"><a href="#0">Буцах</a></p>
-	</div>
-	
-</div>
 </div>
 <!-- end login -->
 <script src="js/modernizr.js"></script>
@@ -1311,8 +1002,9 @@ on: 'hover'
 });
 </script>
 <script>
-</script>
-<script>
+$('.ui.checkbox')
+.checkbox()
+;
 $('.ui.accordion')
 .accordion()
 ;
@@ -1343,9 +1035,6 @@ $('.ui.search')
 .search({
 source: content
 })
-;
-$('.ui.checkbox')
-.checkbox()
 ;
 $('.ui.rating')
 .rating()
@@ -1379,31 +1068,17 @@ var content = [
 { title: 'Burundi' }
 ];
 </script>
-<script>
-$('.ui.form')
-.form({
-fields: {
-email: {
-identifier  : 'email',
-rules: [
-{
-type   : 'empty',
-prompt : 'Please enter your name'
-}
-]
-},
-name: {
-identifier  : 'name',
-rules: [
-{
-type   : 'empty',
-prompt : 'Please enter your name'
-}
-]
-}
-}
-})
-;
+<script type="text/javascript">
+$('#reservation').daterangepicker({
+"autoApply": true,
+"showCustomRangeLabel": true,
+"alwaysShowCalendars": true,
+"startDate": "11/12/2016",
+"endDate": "11/18/2016",
+"opens": "center"
+}, function(start, end, label) {
+console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
+});
 </script>
 <link href="dist/css/jplist.core.min.css" rel="stylesheet" type="text/css" />
 <script src="dist/js/jplist.core.min.js"></script>

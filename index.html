@@ -15,16 +15,30 @@
 		<script src="dist/semantic.min.js"></script>
 		<script type="text/javascript" src="js/moment.js"></script>
 		<script type="text/javascript" src="js/daterangepicker.js"></script>
+		
 		<title>ihotel.mn</title>
 	</head>
 	<body>
-		<div class="hotel-admin">
-			<a href="#"><i class="icon user"></i></a>
-		</div>
+		
 		<header>
 			<div class="ui container">
 				<div class="cd-logo"><a href="#0"><img src="img/logo-white.png" alt="Logo"></a></div>
 				<div class="important-word"><i class="spinner loading icon"></i>Эд хөрөнгийг бус дурсамжийг цуглуул</div>
+				
+				<div class="dollar-exchange">
+					<div class="ui dropdown dollar-exch">
+						MNT
+						<div class="menu">
+							
+							<div class="item exchange">USA $</div>
+							<div class="item exchange">GBP £</div>
+							<div class="item exchange">JPN ¥</div>
+							<div class="item exchange">AUD $</div>
+							<div class="item exchange">CHN </div>
+							
+						</div>
+					</div>
+				</div>
 				<nav class="main-nav cd-main-nav-wrapper">
 					<ul class="cd-main-nav">
 						<li><a class="cd-signin" href="#0"><i class="user icon"></i>Нэвтрэх</a></li>
@@ -50,26 +64,30 @@
 		
 		
 		<div class="home-banner">
-			<img src="img/banner3.jpg" alt="">
+			<ul class="rslides">
+				<li><img src="img/banner1.jpg" alt=""></li>
+				<li><img src="img/banner2.jpg" alt=""></li>
+				<li><img src="img/banner3.jpg" alt=""></li>
+			</ul>
 		</div>
 		
 		<div id="main-search">
 			<div class="ui stackable container">
 				
 				<div id="context2">
-					<div class="ui secondary menu">
+					<div class="ui stackable secondary menu">
 						
 						<a class="item active" data-tab="hotel"><i class="hotel icon"></i>Зочид буудал</a>
 						
-						<!-- 		 <a class="item" data-tab="tour" class="hotel-tab"><i class="globe icon"></i>Aялал</a>
-						
-						<a class="item" data-tab="fly" class="hotel-tab"><i class="plane icon"></i>Нислэг</a>
-						<a class="item" data-tab="travel" class="hotel-tab"><i class="map icon"></i>Аялах сэдэл</a>  -->
+						<!-- <a class="item" data-tab="tour" class="hotel-tab"><i class="globe icon"></i>Aялал</a> -->
+						<a href="https://www.sixt.com/php/reservation" target="_blance" class="item"><i class="car icon"></i>Машин түрээс</a>
+						<a href="blog.html" class="item tab-travel"><i class="plane icon"></i>Аялах сэдэл</a>
+						<!-- <a class="item" data-tab="travel" class="hotel-tab"><i class="map icon"></i>Аялах сэдэл</a>  -->
 					</div>
 					<div class="ui active tab segment" data-tab="hotel">
 						
 						
-						<div class="ui grid search-form">
+						<div class="ui grid stackable search-form">
 							<div class="four wide column">
 								<div class="local example">
 									<div class="ui search">
@@ -80,35 +98,7 @@
 										<div class="results"></div>
 									</div>
 								</div>
-								<script>
-								var content = [
-								{ title: 'Andorra' },
-								{ title: 'United Arab Emirates' },
-								{ title: 'Afghanistan' },
-								{ title: 'Antigua' },
-								{ title: 'Anguilla' },
-								{ title: 'Albania' },
-								{ title: 'Armenia' },
-								{ title: 'Netherlands Antilles' },
-								{ title: 'Angola' },
-								{ title: 'Argentina' },
-								{ title: 'American Samoa' },
-								{ title: 'Austria' },
-								{ title: 'Australia' },
-								{ title: 'Aruba' },
-								{ title: 'Aland Islands' },
-								{ title: 'Azerbaijan' },
-								{ title: 'Bosnia' },
-								{ title: 'Barbados' },
-								{ title: 'Bangladesh' },
-								{ title: 'Belgium' },
-								{ title: 'Burkina Faso' },
-								{ title: 'Bulgaria' },
-								{ title: 'Bahrain' },
-								{ title: 'Burundi' }
 								
-								];
-								</script>
 							</div>
 							<div class="four wide column">
 								<div class="ui page stackable">
@@ -123,13 +113,7 @@
 											<i class="calendar icon"></i>
 										</div>
 									</form>
-									<script type="text/javascript">
-									$(document).ready(function() {
-										$('#reservation').daterangepicker(null, function(start, end, label) {
-										console.log(start.toISOString(), end.toISOString(), label);
-										});
-									});
-									</script>
+									
 									
 									
 									
@@ -182,9 +166,9 @@
 						</div>
 						
 					</div>
-					<div class="ui tab segment" data-tab="tour">
-						TRAVEL
-					</div>
+					<!-- <div class="ui tab segment" data-tab="tour">
+							TRAVEL
+					</div> -->
 					<div class="ui tab segment" data-tab="fly">
 						FLY
 					</div>
@@ -194,7 +178,6 @@
 				</div>
 			</div>
 		</div>
-		
 		
 		<section class="cd-hero">
 			<ul class="cd-hero-slider autoplay">
@@ -240,91 +223,147 @@
 					<span class="cd-marker item-1"></span>
 					
 					<ul>
-						<li class="selected"><a href="#0"><img src="img/security.png"><label>Хялбар найдвартай </label></a></li>
-						<li><a href="#0"><img src="img/users.png"><label>Мэргэжлийн <br>баг</label></a></li>
-						<li><a href="#0"><img src="img/dollar.png"><label>Нэмэлт төлбөргүй</label></a></li>
-						<li><a href="#0"><img src="img/pay.png"><label>Очоод <br>төл</label></a></li>
-						<li><a href="#0"><img src="img/gift.png"><label>Өргөн <br>сонголт</label></a></li>
+						<li class="selected"><a href="#0"><img src="img/13.png"><label>Хялбар найдвартай </label></a></li>
+						<li><a href="#0"><img src="img/5.png"><label>Мэргэжлийн <br>баг</label></a></li>
+						<li><a href="#0"><img src="img/3.png"><label>Нэмэлт төлбөргүй</label></a></li>
+						<li><a href="#0"><img src="img/8.png"><label>Очоод <br>төл</label></a></li>
+						<li><a href="#0"><img src="img/9.png"><label>Өргөн <br>сонголт</label></a></li>
 					</ul>
 				</nav>
 			</div>
 		</section>
 		
-		
-		<div class="ui container special-content">
-			<div class="ui stackable grid">
-				<div class="three column row">
-					<div class="column">
-						<h4 class="ui centered header"><i class="ui map icon"></i>Аялах сэдэл</h4>
-						<div class="ui raised link special cards">
-							<div class="card">
-								<div class="blurring dimmable image">
-									<div class="ui inverted dimmer">
-										<div class="content">
-											<div class="center">
-												<div class="ui primary button">Дэлгэрэнгүй</div>
-											</div>
-										</div>
-									</div>
-									<img src="img/news.jpg">
+		<div class="admin-login">
+			<div class="ui container">
+				<div class="page-title">
+					<div id="ihotel" class="ui stackable container ">
+						<div class="sixteen wide center aligned column">
+							<h4 id="contact">Удирдлагын системд нэвтрэх</h4>
+						</div>
+					</div>
+				</div>
+				<div class="ui stackable grid">
+					<div class="three column row">
+						
+						<div class="center aligned column">
+							<div class="ui segment ">
+								<div class="content">
+									<img class="ui tiny centered image" src="img/14.png">
 								</div>
-								<div class="content footer-news">
-									<a class="header">Зочид буудлуудыг захиалгын нэгдсэн системд хамруулна</a>
-									<div class="meta">
-										<span class="date"><i class="ui calendar icon"></i>2016-11-11</span>
-									</div>
+								<div class="content">
+									<h4 class="ui sub header">Буудал нэмэх</h4>
+								</div>
+								<div class="extra content">
+									<button class="ui button">Нэвтрэх</button>
+								</div>
+							</div>
+						</div>
+						<div class="center aligned column">
+							<div class="ui segment ">
+								<div class="content">
+									<img class="ui tiny centered image" src="img/room.png">
+								</div>
+								<div class="content">
+									<h4 class="ui sub header">Өрөөний удирдлагын систем</h4>
+								</div>
+								<div class="extra content">
+									<button class="ui button">Нэвтрэх</button>
+								</div>
+							</div>
+						</div>
+						<div class="center aligned column">
+							<div class="ui segment ">
+								<div class="content">
+									<img class="ui tiny centered image" src="img/hotel.png">
+								</div>
+								<div class="content">
+									<h4 class="ui sub header">Зочид буудалын систем</h4>
+								</div>
+								<div class="extra content">
+									<button class="ui button">Нэвтрэх</button>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="column">
-						<h4 class="ui centered header"><i class="ui globe icon"></i>Улс орнууд</h4>
-						<div class="ui raised link special cards">
-							<div class="card">
-								<div class="blurring dimmable image">
-									<div class="ui inverted dimmer">
-										<div class="content">
-											<div class="center">
-												<div class="ui primary button">Дэлгэрэнгүй</div>
+				</div>
+			</div>
+		</div>
+		<div class="special-content">
+			<div class="ui container">
+				<div class="ui stackable grid">
+					<div class="three column row">
+						<div class="column">
+							<h4 class="ui centered header"><i class="ui map icon"></i>Аялах сэдэл</h4>
+							<div class="ui raised link cards">
+								<div class="card">
+									<div class="blurring dimmable image">
+										<div class="ui inverted dimmer">
+											<div class="content">
+												<div class="center">
+													<div class="ui primary button">Дэлгэрэнгүй</div>
+												</div>
 											</div>
 										</div>
+										<img src="img/news.jpg">
 									</div>
-									<img src="img/country.jpg">
-								</div>
-								<div class="content footer-news">
-									<a class="header">Монгол улс</a>
-									<div class="meta">
-										<span class="date"><i class="ui calendar icon"></i>2016-11-11</span>
+									<div class="content footer-news">
+										<a class="header">Зочид буудлуудыг захиалгын нэгдсэн системд хамруулна</a>
+										<div class="meta">
+											<span class="date"><i class="ui calendar icon"></i>2016-11-11</span>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="column">
-						<h4 class="ui centered header"><i class="ui tags icon"></i>Хямдрал</h4>
-						<div class="ui raised link special cards">
-							<div class="card">
-								<div class="blurring dimmable image">
-									<div class="ui inverted dimmer">
-										<div class="content">
-											<div class="center">
-												<div class="ui primary button">Дэлгэрэнгүй</div>
+						<div class="column">
+							<h4 class="ui centered header"><i class="ui globe icon"></i>Улс орнууд</h4>
+							<div class="ui raised link cards">
+								<div class="card">
+									<div class="blurring dimmable image">
+										<div class="ui inverted dimmer">
+											<div class="content">
+												<div class="center">
+													<div class="ui primary button">Дэлгэрэнгүй</div>
+												</div>
 											</div>
 										</div>
+										<img src="img/country.jpg">
 									</div>
-									<div class="ui fluid image">
-										<div class="ui red right ribbon label">
-											164,000₮
+									<div class="content footer-news">
+										<a class="header">Монгол улс</a>
+										<div class="meta">
+											<span class="date"><i class="ui calendar icon"></i>2016-11-11</span>
 										</div>
-										<img src="img/hotel.jpg">
 									</div>
-									
 								</div>
-								<div class="content footer-news">
-									<a class="header">Хүннү зочид буудал <i class="ui star icon"></i><i class="ui star icon"></i><i class="ui star icon"></i></a>
-									Сүхбаатар дүүрэг, 11-р хороо, Их тойруу-13, 100 айл
-									<div class="meta">
+							</div>
+						</div>
+						<div class="column">
+							<h4 class="ui centered header"><i class="ui tags icon"></i>Хямдрал</h4>
+							<div class="ui raised link cards">
+								<div class="card">
+									<div class="blurring dimmable image">
+										<div class="ui inverted dimmer">
+											<div class="content">
+												<div class="center">
+													<div class="ui primary button">Дэлгэрэнгүй</div>
+												</div>
+											</div>
+										</div>
+										<div class="ui fluid image">
+											<div class="ui red right ribbon label">
+												164,000₮
+											</div>
+											<img src="img/hotel.jpg">
+										</div>
 										
+									</div>
+									<div class="content footer-news">
+										<a class="header">Хүннү зочид буудал <i class="ui star icon"></i><i class="ui star icon"></i><i class="ui star icon"></i></a>
+										Сүхбаатар дүүрэг, 11-р хороо, Их тойруу-13, 100 айл
+										<div class="meta">
+											
+										</div>
 									</div>
 								</div>
 							</div>
@@ -333,7 +372,6 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="people-say">
 			<div class="ui container">
 				<div class="ui two column centered stackable grid">
@@ -407,60 +445,11 @@
 				</div>
 			</div>
 		</div>
-		<div class="admin-login">
-			<div class="ui container">
-				<div class="ui stackable grid">
-					<div class="three column row">
-						<div class="center aligned column">
-						
-							<div class="content">
-								<img class="ui tiny centered image" src="img/marker.png">
-							</div>
-							<div class="content">
-								<h4 class="ui sub header">Буудал нэмэх</h4>
-							</div>
-							<div class="extra content">
-								<button class="ui button">Нэвтрэх</button>
-							</div>
-						</div>
-
-						<div class="center aligned column">
-							
-							<div class="content">
-								<img class="ui tiny centered image" src="img/room.png">
-							</div>
-							<div class="content">
-								<h4 class="ui sub header">Өрөөний удирдлагын систем</h4>
-							</div>
-							<div class="extra content">
-								<button class="ui button">Нэвтрэх</button>
-							</div>
-							
-						</div>
-						<div class="center aligned column">
-							
-							<div class="content">
-								<img class="ui tiny centered image" src="img/hotel.png">
-							</div>
-							<div class="content">
-								<h4 class="ui sub header">Зочид буудалын систем</h4>
-							</div>
-							<div class="extra content">
-								<button class="ui button">Нэвтрэх</button>
-							</div>
-							
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
+		
 		<div class="ui inverted vertical footer segment">
 			<div class="ui center aligned container">
 				<div class="ui stackable divided grid">
-					<div class="two wide column footer-menu"></div>
-					<div class="four wide column">
-						
+					<div class="five wide column">
 						<h4 class="ui inverted header">Үндсэн цэс</h4>
 						<div class="ui inverted link list">
 							<a href="#" class="item">Улс орнууд</a>
@@ -469,7 +458,7 @@
 							<a href="#" class="item">Үйлчилгээний нөхцөл</a>
 						</div>
 					</div>
-					<div class="four wide column footer-menu">
+					<div class="six wide column footer-menu">
 						<h4 class="ui inverted header">Бидэнтэй хамтрах</h4>
 						<div class="ui inverted link list">
 							<a href="#" class="item">Буудал нэмэх</a>
@@ -478,7 +467,7 @@
 							<a href="#" class="item">Групп захиалга</a>
 						</div>
 					</div>
-					<div class="four wide column footer-menu">
+					<div class="five wide column footer-menu">
 						<h4 class="ui inverted header">Бидний тухай</h4>
 						<div class="ui inverted link list">
 							<a href="#" class="item">iHotel гэж юу вэ?</a>
@@ -487,29 +476,32 @@
 							<a href="#" class="item">Холбоо барих</a>
 						</div>
 					</div>
-					<div class="two wide column footer-menu"></div>
 				</div>
 				<div class="ui divider"></div>
 			</div>
-			<div class="ui center aligned container copyright">
-				<div class="ui stackable grid">
-					<div class="three column row">
-						<div class="column"></div>
-						<div class="column"><h5>© copyright 2016 www.iHotel.mn - <a href="#">Айхотел ххк</a></h5></div>
-						<div class="column">
-							
-							<ul class="social-link">
-								<li><a><i class="icon facebook"></i></a></li>
-								<li><a><i class="icon twitter"></i></a></li>
-								<li><a><i class="icon google plus"></i></a></li>
-								<li><a><i class="icon linkedin"></i></a></li>
-								<li><a><i class="icon instagram"></i></a></li>
-							</ul>
+			<div class="copyright">
+				<div class="ui center aligned stackable container">
+					<div class="ui stackable grid">
+						<div class="three column row">
+							<div class="column"></div>
+							<div class="column"><h5>© copyright 2016 www.iHotel.mn - <a href="#">Айхотел ххк</a></h5></div>
+							<div class="column">
+								
+								<ul class="social-link">
+									<li><a><i class="icon facebook"></i></a></li>
+									<li><a><i class="icon twitter"></i></a></li>
+									<li><a><i class="icon google plus"></i></a></li>
+									<li><a><i class="icon linkedin"></i></a></li>
+									<li><a><i class="icon instagram"></i></a></li>
+								</ul>
+								
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		
 		<!-- login heseg -->
 		
 		<div class="cd-user-modal">
@@ -521,11 +513,10 @@
 				<div id="cd-login">
 					<form class="ui form">
 						<div class="field">
-							<label>Имэйл</label>
 							<input type="text" name="first-name" placeholder="Имэйл">
 						</div>
 						<div class="field">
-							<label>Нууц үг</label>
+							
 							<input type="password" name="last-name" placeholder="Нууц үг">
 						</div>
 						<div class="field">
@@ -534,55 +525,54 @@
 								<label>Намайг сануулах</label>
 							</div>
 						</div>
-						<button class="ui fluid button" type="submit">НЭВТРЭХ</button>
+						<div class="field">
+							<button class="ui default fluid button" type="submit">НЭВТРЭХ</button>
+						</div>
+						<div class="field">
+							<button class="ui fluid facebook button"><i class="facebook icon"></i>Facebook</button>
+						</div>
+						
+						<button class="ui fluid google plus button"><i class="google plus icon"></i>Google Plus</button>
+						
+						<p class="cd-form-bottom-message"><a href="#0">Нууц үгээ мартсан уу?</a></p>
 					</form>
-					
-					<p class="cd-form-bottom-message"><a href="#0">Нууц үгээ мартсан уу?</a></p>
-					
 				</div>
 				<div id="cd-signup">
 					<form class="ui form">
 						<div class="field">
-							<label>Нэр</label>
 							<input type="text" name="first-name" placeholder="Имэйл">
 						</div>
 						<div class="field">
-							<label>Имэйл</label>
 							<input type="text" name="first-name" placeholder="Имэйл">
 						</div>
 						<div class="field">
-							<label>Нууц үг</label>
 							<input type="password" name="last-name" placeholder="Нууц үг">
 						</div>
 						<div class="field">
 							<div class="ui checkbox">
 								<input type="checkbox" tabindex="0" class="hidden">
 								<label> Би зөвшөөрч байна!</label>
-								
 							</div>
-							<label  class="security"><a href="#">Манай сайтны дүрэмтэй танилцан уу!!!</a></label>
 						</div>
 						<button class="ui fluid button" type="submit">БҮРТГҮҮЛЭХ</button>
+						<p><a href="#">Манай сайтны дүрэмтэй танилцан уу!!!</a></p>
 					</form>
-					
-					
 				</div>
 				<div id="cd-reset-password">
 					<p class="ui center aligned container">Та нууц үгээ мартсан уу? Та манай сайтанд бүртгүүлсэн бүртгэлтэй имэйл хаягаа оруулна уу!</p>
 					<form class="ui form">
 						<div class="field">
-							<label>Имэйл</label>
+							
 							<input type="text" name="first-name" placeholder="Имэйл">
 						</div>
 						<button class="ui fluid button" type="submit">Нууц үг илгээх</button>
-						
+						<p class="cd-form-bottom-message"><a href="#0">Буцах</a></p>
 					</form>
-					<p class="cd-form-bottom-message"><a href="#0">Буцах</a></p>
 				</div>
-				
 			</div>
 		</div>
 		<!-- end login -->
+		
 		<script src="js/modernizr.js"></script>
 		<script type="text/javascript" src="dist/components/popup.js"></script>
 		<script type="text/javascript" src="dist/components/dropdown.js"></script>
@@ -590,6 +580,34 @@
 		<script src="js/iframe-content.js"></script>
 		<script src="js/main.js"></script>
 		<script src="js/responsiveslides.min.js"></script>
+		<script>
+				var content = [
+				{ title: 'Andorra' },
+				{ title: 'United Arab Emirates' },
+				{ title: 'Afghanistan' },
+				{ title: 'Antigua' },
+				{ title: 'Anguilla' },
+				{ title: 'Albania' },
+				{ title: 'Armenia' },
+				{ title: 'Netherlands Antilles' },
+				{ title: 'Angola' },
+				{ title: 'Argentina' },
+				{ title: 'American Samoa' },
+				{ title: 'Austria' },
+				{ title: 'Australia' },
+				{ title: 'Aruba' },
+				{ title: 'Aland Islands' },
+				{ title: 'Azerbaijan' },
+				{ title: 'Bosnia' },
+				{ title: 'Barbados' },
+				{ title: 'Bangladesh' },
+				{ title: 'Belgium' },
+				{ title: 'Burkina Faso' },
+				{ title: 'Bulgaria' },
+				{ title: 'Bahrain' },
+				{ title: 'Burundi' }
+				];
+		</script>
 		<script>
 		$(function() {
 		$(".rslides").responsiveSlides();
@@ -613,9 +631,12 @@
 		});
 		</script>
 		<script>
-		</script>
-		
-		<script>
+		$('.ui.checkbox')
+		.checkbox()
+		;
+		$('.ui.accordion')
+		.accordion()
+		;
 		$('.clear.example .button')
 		.on('click', function() {
 		$('.clear.example .ui.dropdown')
@@ -644,41 +665,11 @@
 		source: content
 		})
 		;
-		$('.ui.checkbox')
-		.checkbox()
-		;
 		$('.ui.rating')
 		.rating()
 		;
 		</script>
-		<script>
-		var content = [
-		{ title: 'Andorra' },
-		{ title: 'United Arab Emirates' },
-		{ title: 'Afghanistan' },
-		{ title: 'Antigua' },
-		{ title: 'Anguilla' },
-		{ title: 'Albania' },
-		{ title: 'Armenia' },
-		{ title: 'Netherlands Antilles' },
-		{ title: 'Angola' },
-		{ title: 'Argentina' },
-		{ title: 'American Samoa' },
-		{ title: 'Austria' },
-		{ title: 'Australia' },
-		{ title: 'Aruba' },
-		{ title: 'Aland Islands' },
-		{ title: 'Azerbaijan' },
-		{ title: 'Bosnia' },
-		{ title: 'Barbados' },
-		{ title: 'Bangladesh' },
-		{ title: 'Belgium' },
-		{ title: 'Burkina Faso' },
-		{ title: 'Bulgaria' },
-		{ title: 'Bahrain' },
-		{ title: 'Burundi' }
-		];
-		</script>
+		
 		<script defer src="js/jquery.flexslider.js"></script>
 		<script type="text/javascript">
 		$(function(){
@@ -694,112 +685,15 @@
 		});
 		</script>
 		<script type="text/javascript">
-		$(document).ready(function() {
-		$('#config-text').keyup(function() {
-		eval($(this).val());
-		});
-		
-		$('.configurator input, .configurator select').change(function() {
-		updateConfig();
-		});
-		$('.demo i').click(function() {
-		$(this).parent().find('input').click();
-		});
-		$('#startDate').daterangepicker({
-		singleDatePicker: true,
-		startDate: moment().subtract(6, 'days')
-		});
-		$('#endDate').daterangepicker({
-		singleDatePicker: true,
-		startDate: moment()
-		});
-		updateConfig();
-		function updateConfig() {
-		var options = {};
-		if ($('#singleDatePicker').is(':checked'))
-		options.singleDatePicker = true;
-		
-		if ($('#showDropdowns').is(':checked'))
-		options.showDropdowns = true;
-		if ($('#showWeekNumbers').is(':checked'))
-		options.showWeekNumbers = true;
-		if ($('#showISOWeekNumbers').is(':checked'))
-		options.showISOWeekNumbers = true;
-		if ($('#timePicker').is(':checked'))
-		options.timePicker = true;
-		
-		if ($('#timePicker24Hour').is(':checked'))
-		options.timePicker24Hour = true;
-		if ($('#timePickerIncrement').val().length && $('#timePickerIncrement').val() != 1)
-		options.timePickerIncrement = parseInt($('#timePickerIncrement').val(), 10);
-		if ($('#timePickerSeconds').is(':checked'))
-		options.timePickerSeconds = true;
-		
-		if ($('#autoApply').is(':checked'))
-		options.autoApply = true;
-		if ($('#dateLimit').is(':checked'))
-		options.dateLimit = { days: 7 };
-		if ($('#ranges').is(':checked')) {
-		options.ranges = {
-		'Today': [moment(), moment()],
-		'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-		'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-		'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-		'This Month': [moment().startOf('month'), moment().endOf('month')],
-		'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-		};
-		}
-		if ($('#locale').is(':checked')) {
-		$('#rtl-wrap').show();
-		options.locale = {
-		direction: $('#rtl').is(':checked') ? 'rtl' : 'ltr',
-		format: 'MM/DD/YYYY HH:mm',
-		separator: ' - ',
-		applyLabel: 'Apply',
-		cancelLabel: 'Cancel',
-		fromLabel: 'From',
-		toLabel: 'To',
-		customRangeLabel: 'Custom',
-		daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr','Sa'],
-		monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-		firstDay: 1
-		};
-		} else {
-		$('#rtl-wrap').hide();
-		}
-		if (!$('#linkedCalendars').is(':checked'))
-		options.linkedCalendars = false;
-		if (!$('#autoUpdateInput').is(':checked'))
-		options.autoUpdateInput = false;
-		if (!$('#showCustomRangeLabel').is(':checked'))
-		options.showCustomRangeLabel = false;
-		if ($('#alwaysShowCalendars').is(':checked'))
-		options.alwaysShowCalendars = true;
-		if ($('#parentEl').val().length)
-		options.parentEl = $('#parentEl').val();
-		if ($('#startDate').val().length)
-		options.startDate = $('#startDate').val();
-		if ($('#endDate').val().length)
-		options.endDate = $('#endDate').val();
-		
-		if ($('#minDate').val().length)
-		options.minDate = $('#minDate').val();
-		if ($('#maxDate').val().length)
-		options.maxDate = $('#maxDate').val();
-		if ($('#opens').val().length && $('#opens').val() != 'right')
-		options.opens = $('#opens').val();
-		if ($('#drops').val().length && $('#drops').val() != 'down')
-		options.drops = $('#drops').val();
-		if ($('#buttonClasses').val().length && $('#buttonClasses').val() != 'btn btn-sm')
-		options.buttonClasses = $('#buttonClasses').val();
-		if ($('#applyClass').val().length && $('#applyClass').val() != 'btn-success')
-		options.applyClass = $('#applyClass').val();
-		if ($('#cancelClass').val().length && $('#cancelClass').val() != 'btn-default')
-		options.cancelClass = $('#cancelClass').val();
-		$('#config-text').val("$('#demo').daterangepicker(" + JSON.stringify(options, null, '    ') + ", function(start, end, label) {\n  console.log(\"New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')\");\n});");
-		$('#config-demo').daterangepicker(options, function(start, end, label) { console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')'); });
-		
-		}
+		$('#reservation').daterangepicker({
+		"autoApply": true,
+		"showCustomRangeLabel": true,
+		"alwaysShowCalendars": true,
+		"startDate": "11/12/2016",
+		"endDate": "11/18/2016",
+		"opens": "center"
+		}, function(start, end, label) {
+		console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
 		});
 		</script>
 		

@@ -15,6 +15,7 @@
 		<script src="dist/semantic.min.js"></script>
 		<script type="text/javascript" src="js/moment.js"></script>
 		<script type="text/javascript" src="js/daterangepicker.js"></script>
+		<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
 		<title>ihotel.mn</title>
 	</head>
 	<body>
@@ -47,7 +48,7 @@
 							
 							<div class="sixteen wide column">
 								<div id="context1">
-									<div class="ui secondary menu">
+									<div class="ui stackable secondary menu">
 										<a class="item active" data-tab="first">Буудлын мэдээлэл</a>
 										<a class="item" data-tab="second">Боломжит өрөө </a>
 										<a class="item" data-tab="third">Үйлчлүүлэгчдийн сэтгэгдэл<div class="floating circular ui green label">2</div></a>
@@ -476,13 +477,7 @@
 																<i class="calendar icon"></i>
 															</div>
 														</form>
-														<script type="text/javascript">
-														$(document).ready(function() {
-															$('#reservation').daterangepicker(null, function(start, end, label) {
-															console.log(start.toISOString(), end.toISOString(), label);
-															});
-														});
-														</script>
+														
 														
 														
 														
@@ -601,10 +596,11 @@
 											</div>
 											
 										</div>
+										<h4 class="ui header">Төлөөгүй нэхэмжлэл</h4>
 										<div class="sixteen wide column">
 											
-											<table class="ui stackable inverted  table error-neh">
-												<thead class="neh-error">
+											<table class="ui celled table">
+												<thead>
 													<tr>
 														<th>Нэхэмжлэхийн дугаар</th>
 														<th>Хугацаа</th>
@@ -612,7 +608,6 @@
 														<th>Нэхэмжилсэн огноо</th>
 														<th>Төлбөр хийх хугацаа</th>
 														<th>Статус</th>
-														
 													</tr>
 												</thead>
 												<tbody>
@@ -652,6 +647,7 @@
 												</tbody>
 											</table>
 											
+											<h4 class="ui header">Нэхэмжлэхүүд</h4>
 											<div class="ui styled fluid accordion segment">
 												<div class="active title neh-title">
 													<div class="ui clearing">
@@ -853,25 +849,25 @@
 											<div class="ten wide column">
 												<div class="ui segment">
 													
-												<table class="ui stackable very basic table">
+													<table class="ui stackable very basic table">
 														<thead>
 															<tr>
 																<th></th>
 																<th>Гарчиг</th>
 																
 																<th>Огноо</th>
-									
+																
 																<th>Устгах</th>
 																
 															</tr>
 														</thead>
 														<tbody>
 															<tr>
-																 
+																
 																<td><i class="big mail outline icon"></i></td>
 																<td><a href="#">Бид үйлчлүүлэгчдийн ТУРШЛАГА дээр үндэслэн</a></td>
 																<td>2016-11-04 05:11:05</td>
-															 
+																
 																<td>
 																	<a href="#"><i class="big trash icon"></i></a>
 																</td>
@@ -881,7 +877,7 @@
 																<td><i class="big mail outline icon"></i></td>
 																<td><a href="#">Бид үйлчлүүлэгчдийн ТУРШЛАГА дээр үндэслэн</a></td>
 																<td>2016-11-04 05:11:05</td>
-															 
+																
 																<td>
 																	
 																	<a href="#"><i class="big trash icon"></i></a>
@@ -890,25 +886,22 @@
 															
 														</tbody>
 													</table>
-
-
-
-
 												</div>
 											</div>
 											<div class="three wide column">
 												<div class="ui segment">
 													
+													<h4 class="ui header">Сэтгэгдэл илгээх</h4>
 													<form class="ui form">
 														<div class="field">
 															<label>Гарчиг</label>
-																<select class="ui fluid search dropdown">
-														<option value="">Гарчиг сонгох</option>
-														<option value="1">Борлуулалт/Менежмент</option>
-														<option value="2">Санхүү</option>
-														<option value="3">Программ</option>
-														<option value="4">Бусад </option>
-													</select>
+															<select class="ui fluid search dropdown">
+																<option value="">Гарчиг сонгох</option>
+																<option value="1">Борлуулалт/Менежмент</option>
+																<option value="2">Санхүү</option>
+																<option value="3">Программ</option>
+																<option value="4">Бусад </option>
+															</select>
 														</div>
 														<div class="field">
 															<label>Сэтгэгдэл </label>
@@ -935,14 +928,10 @@
 		
 	</div>
 	
-	
-	
 	<div class="ui inverted vertical footer segment">
 		<div class="ui center aligned container">
 			<div class="ui stackable divided grid">
-				<div class="two wide column footer-menu"></div>
-				<div class="four wide column">
-					
+				<div class="five wide column">
 					<h4 class="ui inverted header">Үндсэн цэс</h4>
 					<div class="ui inverted link list">
 						<a href="#" class="item">Улс орнууд</a>
@@ -951,7 +940,7 @@
 						<a href="#" class="item">Үйлчилгээний нөхцөл</a>
 					</div>
 				</div>
-				<div class="four wide column footer-menu">
+				<div class="six wide column footer-menu">
 					<h4 class="ui inverted header">Бидэнтэй хамтрах</h4>
 					<div class="ui inverted link list">
 						<a href="#" class="item">Буудал нэмэх</a>
@@ -960,7 +949,7 @@
 						<a href="#" class="item">Групп захиалга</a>
 					</div>
 				</div>
-				<div class="four wide column footer-menu">
+				<div class="five wide column footer-menu">
 					<h4 class="ui inverted header">Бидний тухай</h4>
 					<div class="ui inverted link list">
 						<a href="#" class="item">iHotel гэж юу вэ?</a>
@@ -969,24 +958,26 @@
 						<a href="#" class="item">Холбоо барих</a>
 					</div>
 				</div>
-				<div class="two wide column footer-menu"></div>
 			</div>
 			<div class="ui divider"></div>
 		</div>
-		<div class="ui center aligned container copyright">
-			<div class="ui relaxed grid">
-				<div class="three column row">
-					<div class="column"></div>
-					<div class="column"><h5>© copyright 2016 www.iHotel.mn - <a href="#">Айхотел ххк</a></h5></div>
-					<div class="column">
-						
-						<ul class="social-link">
-							<li><a><i class="icon facebook"></i></a></li>
-							<li><a><i class="icon twitter"></i></a></li>
-							<li><a><i class="icon google plus"></i></a></li>
-							<li><a><i class="icon linkedin"></i></a></li>
-							<li><a><i class="icon instagram"></i></a></li>
-						</ul>
+		<div class="copyright">
+			<div class="ui center aligned stackable container">
+				<div class="ui stackable grid">
+					<div class="three column row">
+						<div class="column"></div>
+						<div class="column"><h5>© copyright 2016 www.iHotel.mn - <a href="#">Айхотел ххк</a></h5></div>
+						<div class="column">
+							
+							<ul class="social-link">
+								<li><a><i class="icon facebook"></i></a></li>
+								<li><a><i class="icon twitter"></i></a></li>
+								<li><a><i class="icon google plus"></i></a></li>
+								<li><a><i class="icon linkedin"></i></a></li>
+								<li><a><i class="icon instagram"></i></a></li>
+							</ul>
+							
+						</div>
 					</div>
 				</div>
 			</div>
@@ -1003,11 +994,10 @@
 			<div id="cd-login">
 				<form class="ui form">
 					<div class="field">
-						<label>Имэйл</label>
 						<input type="text" name="first-name" placeholder="Имэйл">
 					</div>
 					<div class="field">
-						<label>Нууц үг</label>
+						
 						<input type="password" name="last-name" placeholder="Нууц үг">
 					</div>
 					<div class="field">
@@ -1016,55 +1006,53 @@
 							<label>Намайг сануулах</label>
 						</div>
 					</div>
-					<button class="ui fluid button" type="submit">НЭВТРЭХ</button>
+					<div class="field">
+						<button class="ui default fluid button" type="submit">НЭВТРЭХ</button>
+					</div>
+					<div class="field">
+						<button class="ui fluid facebook button"><i class="facebook icon"></i>Facebook</button>
+					</div>
+					
+					<button class="ui fluid google plus button"><i class="google plus icon"></i>Google Plus</button>
+					<p class="cd-form-bottom-message"><a href="#0">Нууц үгээ мартсан уу?</a></p>
 				</form>
-				
-				<p class="cd-form-bottom-message"><a href="#0">Нууц үгээ мартсан уу?</a></p>
-				
 			</div>
 			<div id="cd-signup">
 				<form class="ui form">
 					<div class="field">
-						<label>Нэр</label>
 						<input type="text" name="first-name" placeholder="Имэйл">
 					</div>
 					<div class="field">
-						<label>Имэйл</label>
 						<input type="text" name="first-name" placeholder="Имэйл">
 					</div>
 					<div class="field">
-						<label>Нууц үг</label>
 						<input type="password" name="last-name" placeholder="Нууц үг">
 					</div>
 					<div class="field">
 						<div class="ui checkbox">
 							<input type="checkbox" tabindex="0" class="hidden">
 							<label> Би зөвшөөрч байна!</label>
-							
 						</div>
-						<label  class="security"><a href="#">Манай сайтны дүрэмтэй танилцан уу!!!</a></label>
 					</div>
 					<button class="ui fluid button" type="submit">БҮРТГҮҮЛЭХ</button>
+					<p><a href="#">Манай сайтны дүрэмтэй танилцан уу!!!</a></p>
 				</form>
-				
-				
 			</div>
 			<div id="cd-reset-password">
 				<p class="ui center aligned container">Та нууц үгээ мартсан уу? Та манай сайтанд бүртгүүлсэн бүртгэлтэй имэйл хаягаа оруулна уу!</p>
 				<form class="ui form">
 					<div class="field">
-						<label>Имэйл</label>
+						
 						<input type="text" name="first-name" placeholder="Имэйл">
 					</div>
 					<button class="ui fluid button" type="submit">Нууц үг илгээх</button>
-					
+					<p class="cd-form-bottom-message"><a href="#0">Буцах</a></p>
 				</form>
-				<p class="cd-form-bottom-message"><a href="#0">Буцах</a></p>
 			</div>
-			
 		</div>
 	</div>
 	<!-- end login -->
+	
 	<script src="js/modernizr.js"></script>
 	<script type="text/javascript" src="dist/components/popup.js"></script>
 	<script type="text/javascript" src="dist/components/dropdown.js"></script>
@@ -1072,75 +1060,47 @@
 	<script src="js/iframe-content.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/responsiveslides.min.js"></script>
-	<script src="/javascript/library/less.min.js"></script>
+	<script>
+			var content = [
+			{ title: 'Andorra' },
+			{ title: 'United Arab Emirates' },
+			{ title: 'Afghanistan' },
+			{ title: 'Antigua' },
+			{ title: 'Anguilla' },
+			{ title: 'Albania' },
+			{ title: 'Armenia' },
+			{ title: 'Netherlands Antilles' },
+			{ title: 'Angola' },
+			{ title: 'Argentina' },
+			{ title: 'American Samoa' },
+			{ title: 'Austria' },
+			{ title: 'Australia' },
+			{ title: 'Aruba' },
+			{ title: 'Aland Islands' },
+			{ title: 'Azerbaijan' },
+			{ title: 'Bosnia' },
+			{ title: 'Barbados' },
+			{ title: 'Bangladesh' },
+			{ title: 'Belgium' },
+			{ title: 'Burkina Faso' },
+			{ title: 'Bulgaria' },
+			{ title: 'Bahrain' },
+			{ title: 'Burundi' }
+			
+			];
+	</script>
 	<script>
 	$(function() {
 	$(".rslides").responsiveSlides();
 	});
 	</script>
 	<script>
-	$('#example1')
-	.progress({
-	label: 'ratio',
-	text: {
-	ratio: '{value} '
-	}
-	})
-	;
-			$('#example2')
-	.progress({
-	label: 'ratio',
-	text: {
-	ratio: '{value} '
-	}
-	})
-	;
-					$('#example3')
-	.progress({
-	label: 'ratio',
-	text: {
-	ratio: '{value} '
-	}
-	})
-	;
-					$('#example4')
-	.progress({
-	label: 'ratio',
-	text: {
-	ratio: '{value}'
-	}
-	})
-	;
-					$('#example5')
-	.progress({
-	label: 'ratio',
-	text: {
-	ratio: '{value} '
-	}
-	})
-	;
-					$('#example6')
-	.progress({
-	label: 'ratio',
-	text: {
-	ratio: '{value} '
-	}
-	})
-	;
-	</script>
-	<script>
-	
 	$('#context1 .menu .item')
 	.tab({
 	context: $('#context1')
 	})
 	;
 	$('#context2 .menu .item')
-	.tab({
-	context: 'parent'
-	})
-	;
-	$('#context3 .menu .item')
 	.tab({
 	context: 'parent'
 	})
@@ -1152,14 +1112,8 @@
 	});
 	</script>
 	<script>
-	</script>
-	
-	<script>
-			$('.ui.checkbox')
+	$('.ui.checkbox')
 	.checkbox()
-	;
-	$('.menu .item')
-	.tab()
 	;
 	$('.ui.accordion')
 	.accordion()
@@ -1192,176 +1146,87 @@
 	source: content
 	})
 	;
-	$('.ui.checkbox')
-	.checkbox()
-	;
 	$('.ui.rating')
 	.rating()
 	;
 	</script>
-	<script>
-	var content = [
-	{ title: 'Andorra' },
-	{ title: 'United Arab Emirates' },
-	{ title: 'Afghanistan' },
-	{ title: 'Antigua' },
-	{ title: 'Anguilla' },
-	{ title: 'Albania' },
-	{ title: 'Armenia' },
-	{ title: 'Netherlands Antilles' },
-	{ title: 'Angola' },
-	{ title: 'Argentina' },
-	{ title: 'American Samoa' },
-	{ title: 'Austria' },
-	{ title: 'Australia' },
-	{ title: 'Aruba' },
-	{ title: 'Aland Islands' },
-	{ title: 'Azerbaijan' },
-	{ title: 'Bosnia' },
-	{ title: 'Barbados' },
-	{ title: 'Bangladesh' },
-	{ title: 'Belgium' },
-	{ title: 'Burkina Faso' },
-	{ title: 'Bulgaria' },
-	{ title: 'Bahrain' },
-	{ title: 'Burundi' }
-	];
+	
+	<script defer src="js/jquery.flexslider.js"></script>
+	<script type="text/javascript">
+	$(function(){
+	SyntaxHighlighter.all();
+	});
+	$(window).load(function(){
+	$('.flexslider').flexslider({
+	animation: "slide",
+	controlsContainer: $(".custom-controls-container"),
+	customDirectionNav: $(".custom-navigation a"),
+	});
+	});
+	</script>
+	<script type="text/javascript">
+								$('#reservation').daterangepicker({
+								"autoApply": true,
+								
+								
+								"showCustomRangeLabel": true,
+								"alwaysShowCalendars": true,
+								"startDate": "11/12/2016",
+								"endDate": "11/18/2016",
+								"opens": "center"
+								}, function(start, end, label) {
+								console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
+								});
 	</script>
 	<script>
-	$('.ui.form')
-	.form({
-	fields: {
-	
-	email: {
-	identifier  : 'email',
-	rules: [
-	{
-	type   : 'empty',
-	prompt : 'Please enter your name'
-	}
-	]
-	},
-	name: {
-	identifier  : 'name',
-	rules: [
-	{
-	type   : 'empty',
-	prompt : 'Please enter your name'
-	}
-	]
-	}
+	$('#example1')
+	.progress({
+	label: 'ratio',
+	text: {
+	ratio: '{value} '
 	}
 	})
 	;
-	</script>
-	<script type="text/javascript">
-	$(document).ready(function() {
-	$('#config-text').keyup(function() {
-	eval($(this).val());
-	});
-	
-	$('.configurator input, .configurator select').change(function() {
-	updateConfig();
-	});
-	$('.demo i').click(function() {
-	$(this).parent().find('input').click();
-	});
-	$('#startDate').daterangepicker({
-	singleDatePicker: true,
-	startDate: moment().subtract(6, 'days')
-	});
-	$('#endDate').daterangepicker({
-	singleDatePicker: true,
-	startDate: moment()
-	});
-	updateConfig();
-	function updateConfig() {
-	var options = {};
-	if ($('#singleDatePicker').is(':checked'))
-	options.singleDatePicker = true;
-	
-	if ($('#showDropdowns').is(':checked'))
-	options.showDropdowns = true;
-	if ($('#showWeekNumbers').is(':checked'))
-	options.showWeekNumbers = true;
-	if ($('#showISOWeekNumbers').is(':checked'))
-	options.showISOWeekNumbers = true;
-	if ($('#timePicker').is(':checked'))
-	options.timePicker = true;
-	
-	if ($('#timePicker24Hour').is(':checked'))
-	options.timePicker24Hour = true;
-	if ($('#timePickerIncrement').val().length && $('#timePickerIncrement').val() != 1)
-	options.timePickerIncrement = parseInt($('#timePickerIncrement').val(), 10);
-	if ($('#timePickerSeconds').is(':checked'))
-	options.timePickerSeconds = true;
-	
-	if ($('#autoApply').is(':checked'))
-	options.autoApply = true;
-	if ($('#dateLimit').is(':checked'))
-	options.dateLimit = { days: 7 };
-	if ($('#ranges').is(':checked')) {
-	options.ranges = {
-	'Today': [moment(), moment()],
-	'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-	'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-	'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-	'This Month': [moment().startOf('month'), moment().endOf('month')],
-	'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-	};
+		$('#example2')
+	.progress({
+	label: 'ratio',
+	text: {
+	ratio: '{value} '
 	}
-	if ($('#locale').is(':checked')) {
-	$('#rtl-wrap').show();
-	options.locale = {
-	direction: $('#rtl').is(':checked') ? 'rtl' : 'ltr',
-	format: 'MM/DD/YYYY HH:mm',
-	separator: ' - ',
-	applyLabel: 'Apply',
-	cancelLabel: 'Cancel',
-	fromLabel: 'From',
-	toLabel: 'To',
-	customRangeLabel: 'Custom',
-	daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr','Sa'],
-	monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-	firstDay: 1
-	};
-	} else {
-	$('#rtl-wrap').hide();
+	})
+	;
+				$('#example3')
+	.progress({
+	label: 'ratio',
+	text: {
+	ratio: '{value} '
 	}
-	if (!$('#linkedCalendars').is(':checked'))
-	options.linkedCalendars = false;
-	if (!$('#autoUpdateInput').is(':checked'))
-	options.autoUpdateInput = false;
-	if (!$('#showCustomRangeLabel').is(':checked'))
-	options.showCustomRangeLabel = false;
-	if ($('#alwaysShowCalendars').is(':checked'))
-	options.alwaysShowCalendars = true;
-	if ($('#parentEl').val().length)
-	options.parentEl = $('#parentEl').val();
-	if ($('#startDate').val().length)
-	options.startDate = $('#startDate').val();
-	if ($('#endDate').val().length)
-	options.endDate = $('#endDate').val();
-	
-	if ($('#minDate').val().length)
-	options.minDate = $('#minDate').val();
-	if ($('#maxDate').val().length)
-	options.maxDate = $('#maxDate').val();
-	if ($('#opens').val().length && $('#opens').val() != 'right')
-	options.opens = $('#opens').val();
-	if ($('#drops').val().length && $('#drops').val() != 'down')
-	options.drops = $('#drops').val();
-	if ($('#buttonClasses').val().length && $('#buttonClasses').val() != 'btn btn-sm')
-	options.buttonClasses = $('#buttonClasses').val();
-	if ($('#applyClass').val().length && $('#applyClass').val() != 'btn-success')
-	options.applyClass = $('#applyClass').val();
-	if ($('#cancelClass').val().length && $('#cancelClass').val() != 'btn-default')
-	options.cancelClass = $('#cancelClass').val();
-	$('#config-text').val("$('#demo').daterangepicker(" + JSON.stringify(options, null, '    ') + ", function(start, end, label) {\n  console.log(\"New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')\");\n});");
-	$('#config-demo').daterangepicker(options, function(start, end, label) { console.log('New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')'); });
-	
+	})
+	;
+				$('#example4')
+	.progress({
+	label: 'ratio',
+	text: {
+	ratio: '{value}'
 	}
-	});
+	})
+	;
+				$('#example5')
+	.progress({
+	label: 'ratio',
+	text: {
+	ratio: '{value} '
+	}
+	})
+	;
+				$('#example6')
+	.progress({
+	label: 'ratio',
+	text: {
+	ratio: '{value} '
+	}
+	})
+	;
 	</script>
 </body>
 </html>
