@@ -64,7 +64,7 @@
 													<h4 class="ui header">Буудлын мэдээлэл засах</h4>
 												</div>
 												<div class="eight wide column">
-													<button class="ui ihotel right floated button"><i class="mail icon"></i>Сэтгэгдэл илгээх</button>
+													<button class="ui primary right floated button"><i class="mail icon"></i>Сэтгэгдэл илгээх</button>
 													
 												</div>
 											</div>
@@ -97,14 +97,14 @@
 												</div>
 												<div class="thirteen wide column">
 													
-													
+
+
 													
 													<form class="ui form segment">
 														
 														<div class="sixteen wide field">
 															<div class="required field">
-																<label>Буудлын нэр
-																</label>
+																<label>Буудлын нэр</label>
 																<input type="text" name="name">
 															</div>
 														</div>
@@ -184,10 +184,11 @@
 																</div>
 															</div>
 														</div>
-														
+														<button class="ui primary right floated button">Хадгалах</button>
+														<button class="ui ihotel-default right floated button">Буцах</button>
+														<br></br>
 													</form>
-													<button class="ui ihotel right floated button">Хадгалах</button>
-													<button class="ui ihotel-default right floated button">Буцах</button>
+													
 												</div>
 											</div>
 										</div>
@@ -200,7 +201,7 @@
 													<h4 class="ui header">Боломжит өрөө</h4>
 												</div>
 												<div class="eight wide column">
-													<button class="ui ihotel right floated button"><i class="mail icon"></i>Сэтгэгдэл илгээх</button>
+													<button class="ui primary right floated button"><i class="mail icon"></i>Сэтгэгдэл илгээх</button>
 													
 												</div>
 											</div>
@@ -222,7 +223,7 @@
 													
 												</div>
 												<div class="four wide column">
-													<button class="ui ihotel right floated button"><i class="mail icon"></i>Сэтгэгдэл илгээх</button>
+													<button class="ui primary right floated button"><i class="mail icon"></i>Сэтгэгдэл илгээх</button>
 													
 												</div>
 											</div>
@@ -389,7 +390,7 @@
 														<div class="ui clearing">
 															
 															<h2 class="ui right floated header">
-															<button class="ui ihotel right floated button">Сэтгэгдэл илгээх</button>
+															<button class="ui primary right floated button">Сэтгэгдэл илгээх</button>
 															
 															</h2>
 														</div>
@@ -480,7 +481,7 @@
 													<div class="ui clearing">
 														
 														<h2 class="ui right floated header">
-														<button class="ui ihotel right floated button">Сэтгэгдэл илгээх</button>
+														<button class="ui primary right floated button">Сэтгэгдэл илгээх</button>
 														
 														</h2>
 													</div>
@@ -645,7 +646,7 @@
 													<h4 class="ui header">Нэмжлэх </h4>
 												</div>
 												<div class="eight wide column">
-													<button class="ui ihotel right floated button"><i class="mail icon"></i>Сэтгэгдэл илгээх</button>
+													<button class="ui primary right floated button"><i class="mail icon"></i>Сэтгэгдэл илгээх</button>
 													
 												</div>
 												
@@ -966,7 +967,7 @@
 															<textarea></textarea>
 														</div>
 														
-														<button class="ui ihotel button" type="submit">Илгээх</button>
+														<button class="ui primary button" type="submit">Илгээх</button>
 													</form>
 												</div>
 											</div>
@@ -1286,5 +1287,32 @@
 	})
 	;
 	</script>
+		<script>
+		$('.ui.form')
+		.form({
+		fields: {
+		
+		email: {
+		identifier  : 'email',
+		rules: [
+		{
+		type   : 'empty',
+		prompt : 'Please enter your name'
+		}
+		]
+		},
+		name: {
+		identifier  : 'name',
+		rules: [
+		{
+		type   : 'empty',
+		prompt : 'Please enter your name'
+		}
+		]
+		}
+		}
+		})
+		;
+		</script>
 </body>
 </html>

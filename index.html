@@ -121,7 +121,7 @@
 							</div>
 							<div class="three wide column select-room">
 								<select class="ui fluid search dropdown">
-									<option value="">Өрөө</option>
+									<option value="selected">Өрөө</option>
 									<option value="1">1 өрөө</option>
 									<option value="2">2 өрөө</option>
 									<option value="3">3 өрөө</option>
@@ -140,7 +140,7 @@
 							</div>
 							<div class="three wide column select-room">
 								<select class="ui fluid search dropdown">
-									<option value="">Хүний тоо</option>
+									<option value="selected">Хүний тоо</option>
 									<option value="1">1 хүн</option>
 									<option value="2">2 хүн</option>
 									<option value="3">3 хүн</option>
@@ -233,11 +233,12 @@
 			</div>
 		</section>
 		
-		<div class="admin-login">
+<div class="back-silver">
 			<div class="ui container">
 				<div class="page-title">
 					<div id="ihotel" class="ui stackable container ">
 						<div class="sixteen wide center aligned column">
+							
 							<h4 id="contact">Удирдлагын системд нэвтрэх</h4>
 						</div>
 					</div>
@@ -246,20 +247,24 @@
 					<div class="three column row">
 						
 						<div class="center aligned column">
+						
 							<div class="ui segment ">
+							<div class="login-content">
 								<div class="content">
-									<img class="ui tiny centered image" src="img/14.png">
+									<img class="ui tiny centered image" src="img/marker.png">
 								</div>
 								<div class="content">
 									<h4 class="ui sub header">Буудал нэмэх</h4>
 								</div>
 								<div class="extra content">
-									<button class="ui button">Нэвтрэх</button>
+									<button class="ui primary button">Нэвтрэх</button>
 								</div>
+							</div>
 							</div>
 						</div>
 						<div class="center aligned column">
 							<div class="ui segment ">
+							<div class="login-content">
 								<div class="content">
 									<img class="ui tiny centered image" src="img/room.png">
 								</div>
@@ -267,12 +272,14 @@
 									<h4 class="ui sub header">Өрөөний удирдлагын систем</h4>
 								</div>
 								<div class="extra content">
-									<button class="ui button">Нэвтрэх</button>
+									<button class="ui primary button">Нэвтрэх</button>
+								</div>
 								</div>
 							</div>
 						</div>
 						<div class="center aligned column">
 							<div class="ui segment ">
+							<div class="login-content">
 								<div class="content">
 									<img class="ui tiny centered image" src="img/hotel.png">
 								</div>
@@ -280,8 +287,9 @@
 									<h4 class="ui sub header">Зочид буудалын систем</h4>
 								</div>
 								<div class="extra content">
-									<button class="ui button">Нэвтрэх</button>
+									<button class="ui primary button">Нэвтрэх</button>
 								</div>
+							</div>
 							</div>
 						</div>
 					</div>
@@ -383,7 +391,7 @@
 										
 										<article>
 											<div id="owl">
-												<div class="column row">
+											
 													<div class="large-12 columns testimonial">
 														<div class="quote">
 															<p>
@@ -395,14 +403,14 @@
 															<p>Мисс</p>
 														</div>
 													</div>
-												</div>
+											
 											</div>
 										</article>
 									</li>
 									<li>
 										<article>
 											<div id="owl">
-												<div class="column row">
+											
 													<div class="large-12 columns testimonial">
 														<div class="quote">
 															<p>Айхотел компани бол хөрөнгө оруулалт босгоод үйл ажиллагаагаа бодитой эрхлээд явж байгаа Монголын шилдэг технологийн гарааны бизнес компаниудын нэг яахын аргагүй мөн билээ.</p>
@@ -413,14 +421,14 @@
 															<p>Techstars компанийн Зүүн Өмнөд Ази хариуцсан захирал </p>
 														</div>
 													</div>
-												</div>
+											
 											</div>
 										</article>
 									</li>
 									<li>
 										<article>
 											<div id="owl">
-												<div class="column row">
+											
 													<div class="large-12 columns testimonial">
 														<div class="quote">
 															<p>Гадаад хэргийн яам нь Айхотел компанитай хамтран Ази-Европын дээд хэмжээний 11-дэх уулзалтын зочид төлөөлөгчдийн зочид буудлын захиалгыг ажлыг амжилттай зохион байгуулсан . Хийж буй ажилдаа хариуцлагатай мэргэжлийн баг хамт олонтой ажиллах таатай байлаа.</p>
@@ -431,7 +439,7 @@
 															<p>TECHSTARS КОМПАНИЙН ЗҮҮН ӨМНӨД АЗИ ХАРИУЦСАН ЗАХИРАЛ</p>
 														</div>
 													</div>
-												</div>
+												
 											</div>
 										</article>
 									</li>
@@ -684,13 +692,15 @@
 		});
 		});
 		</script>
+
+ 
 		<script type="text/javascript">
+
 		$('#reservation').daterangepicker({
 		"autoApply": true,
+		startDate: moment().subtract(6, 'days'),
 		"showCustomRangeLabel": true,
 		"alwaysShowCalendars": true,
-		"startDate": "11/12/2016",
-		"endDate": "11/18/2016",
 		"opens": "center"
 		}, function(start, end, label) {
 		console.log("New date range selected: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD') + ' (predefined range: ' + label + ')");
